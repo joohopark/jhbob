@@ -19,6 +19,22 @@ if condition == 1{
 
 - 사실상 다른언어의 if 문법과 다를것이 없다. 
 
+## Swift guard statement
+
+<pre>
+let someValue = 1
+guard someValue > 0 else{
+
+	// guard의 조건이 참이 아닐경우.
+}
+// 참이면 guard 문 다음 로직을 진행.
+</pre>
+
+- if 문의 반대개념이다. 
+- 특정 조건을 만족하지 않을때 보통 return 하게 만들어 사용 한다.
+- 옵셔널 바인딩에서 주로 사용...
+
+
 ## Swift Switch statement
 
 <pre>

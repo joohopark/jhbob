@@ -8,8 +8,9 @@
 	- [for in, while : 반복문](https://github.com/joohopark/jhbob/blob/master/Study/SwiftBasic_for_while.md)
 ## extension
 
-- Recursive Think!
-	- [Recusive?]()
+- 코드의 가독성을 높이자!
+	- [Recursive, 재귀가 뭐임?](https://github.com/joohopark/jhbob/blob/master/Study/Recursive/Recursive01.md)
+	- [Recursive Think!](https://github.com/joohopark/jhbob/blob/master/Study/Recursive/Recursive02.md)
 - Algorithm
 - Apple Docs
 

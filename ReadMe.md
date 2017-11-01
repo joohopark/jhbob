@@ -30,3 +30,4 @@
 
 - Sketch로 ProtoType 제작.(나만의 방법론)
 
+- MIT 아재의 컴피타 이야기.

@@ -85,31 +85,205 @@ import Foundation
 // 제곱근을 구하는 공식은 -> 증가 값 = (증가 값 + (입력 값/ 증가 값)) / 2
 // 증가 값은 0~ 입력 값, 0부터 반복을 시작할경우 divide by zero이므로 1부터 반복
 
-func nextSqaure(input: Int) -> String{
+//func nextSqaure(input: Int) -> String{
+//
+//    var x: Int = 0
+//
+//    for num in 1...input{
+//
+//        x = (num + (input/num))/2// 제곱근 구하는 공식
+//
+//        if input == x*x{
+//            return String((x+1)*(x+1))
+//        }
+//    }
+//
+//    return "no"
+//}
+//
+//print(nextSqaure(input: 121))
 
-    var x: Int = 0
+
+
+//evenOrOdd 메소드는 int형 num을 매개변수로 받습니다.
+//num이 짝수일 경우 "Even"을 반환하고 홀수인 경우 "Odd"를 반환하도록 evenOrOdd에 코드를 작성해 보세요.
+//num은 0이상의 정수이며, num이 음수인 경우는 없습니다.
+
+// 짝 홀 구분 하는 함수
+// 2로 나머지 연산 했을때 0이면 짝, 아니면 홀
+
+
+//func evenOrOdd(num: Int) -> String{
+//
+//    if num % 2 == 0{
+//
+//        return "Even"
+//    }else if num % 2 != 0{
+//
+//        return "Odd"
+//    }
+//
+//    return ""
+//}
+//
+//print(evenOrOdd(num: 5))
+
+
+
+//함수를 완성해서 매개변수 list의 평균값을 return하도록 만들어 보세요.
+//어떠한 크기의 list가 와도 평균값을 구할 수 있어야 합니다.
+func average(listInput: [Int]){
     
-    for num in 1...input{
-        
-        x = (num + (input/num))/2// 제곱근 구하는 공식
-        
-        if input == x*x{
-            return String((x+1)*(x+1))
-        }
-    }
     
-    return "no"
 }
 
-print(nextSqaure(input: 121))
+//피보나치 수는 F(0) = 0, F(1) = 1일 때, 2 이상의 n에 대하여 F(n) = F(n-1) + F(n-2) 가 적용되는 점화식입니다.
+//2 이상의 n이 입력되었을 때, fibonacci 함수를 제작하여 n번째 피보나치 수를 반환해 주세요. 예를 들어 n = 3이라면 2를 반환해주면 됩니다.
+func fibo(index: Int){
+    
+    
+}
 
 
+//printReversedTriangle 메소드는 양의 정수 num을 매개변수로 입력받습니다.
+//다음을 참고해 *(별)로 높이가 num인 삼각형을 문자열로 리턴하는 printReversedTriangle 메소드를 완성하세요
+//
+//높이(num)가 3일때 다음과 같은 문자열을 리턴하면 됩니다.
+func printReversedTriangle(height: Int){
+    
+    
+}
+
+//getMiddle메소드는 하나의 단어를 입력 받습니다.
+//단어를 입력 받아서 가운데 글자를 반환하도록 getMiddle메소드를 만들어 보세요. 단어의 길이가 짝수일경우 가운데 두글자를 반환하면 됩니다.
+//예를들어 입력받은 단어가 power이라면 w를 반환하면 되고, 입력받은 단어가 test라면 es를 반환하면 됩니다.
+func getMiddle(word: String){
+    
+    
+}
+
+//getMinMaxString 메소드는 String형 변수 str을 매개변수로 입력받습니다.
+//str에는 공백으로 구분된 숫자들이 저장되어 있습니다.
+//str에 나타나는 숫자 중 최소값과 최대값을 찾아 이를 "(최소값) (최대값)"형태의 String을 반환하는 메소드를 완성하세요.
+//예를들어 str이 "1 2 3 4"라면 "1 4"를 리턴하고, "-1 -2 -3 -4"라면 "-4 -1"을 리턴하면 됩니다.
+func getMinMaxString(str: String){
+    
+    
+}
 
 
+//두 수를 입력받아 두 수의 최대공약수와 최소공배수를 반환해주는 gcdlcm 함수를 완성해 보세요.
+//배열의 맨 앞에 최대공약수, 그 다음 최소공배수를 넣어 반환하면 됩니다. 예를 들어 gcdlcm(3,12) 가 입력되면, [3, 12]를 반환해주면 됩니다.
+func gcdlcm(fir: Int, sec: Int){
+    
+    
+}
 
 
+//행렬의 덧셈은 행과 열의 크기가 같은 두 행렬의 같은 행, 같은 열의 값을 서로 더한 결과가 됩니다.
+//2개의 행렬을 입력받는 sumMatrix 함수를 완성하여 행렬 덧셈의 결과를 반환해 주세요.
+//
+//예를 들어 2x2 행렬인 A = ((1, 2), (2, 3)), B = ((3, 4), (5, 6)) 가 주어지면, 같은 2x2 행렬인 ((4, 6), (7, 9))를 반환하면 됩니다.(어떠한 행렬에도 대응하는 함수를 완성해주세요.)
+//func matrixAdd(){
+//
+//
+//}
+// swift가 2차원 배열이 돼나???
 
 
+//rm_small함수는 list타입 변수 mylist을 매개변수로 입력받습니다.
+//mylist 에서 가장 작은 수를 제거한 리스트를 리턴하고, mylist의 원소가 1개 이하인 경우는 []를 리턴하는 함수를 완성하세요.
+//예를들어 mylist가 [4,3,2,1]인 경우는 [4,3,2]를 리턴 하고, [10, 8, 22]면 [10, 22]를 리턴 합니다.
+func rmSmall(mylist: Int){
+    
+    
+}
 
+//no_continuous함수는 스트링 s를 매개변수로 입력받습니다.
+//
+//s의 글자들의 순서를 유지하면서, 글자들 중 연속적으로 나타나는 아이템은 제거된 배열(파이썬은 list)을 리턴하도록 함수를 완성하세요.
+//예를들어 다음과 같이 동작하면 됩니다.
+//
+//s가 '133303'이라면 ['1', '3', '0', '3']를 리턴
+//s가 '47330'이라면 [4, 7, 3, 0]을 리턴
+func noContinuous(s: String){
+    
+    
+}
+
+
+//딕셔너리는 들어있는 값에 순서가 없지만, 키를 기준으로 정렬하고 싶습니다. 그래서 키와 값을 튜플로 구성하고, 이를 순서대로 리스트에 넣으려고 합니다.
+//예를들어 {"김철수":78, "이하나":97, "정진원":88}이 있다면 각각의 키와 값을
+//
+//("김철수", 78)
+//("이하나", 97)
+//("정진원", 88)
+//과 같이 튜플로 분리하고 키를 기준으로 정렬해서 다음과 같은 리스트를 만들면 됩니다.
+//[ ("김철수", 78), ("이하나", 97), ("정진원", 88) ]
+//
+//다음 sort_dictionary 함수를 완성해 보세요.
+func sortDictionary(){
+    
+    
+}
+
+//alpha_string46함수는 문자열 s를 매개변수로 입력받습니다.
+//s의 길이가 4혹은 6이고, 숫자로만 구성되있는지 확인해주는 함수를 완성하세요.
+//예를들어 s가 "a234"이면 False를 리턴하고 "1234"라면 True를 리턴하면 됩니다
+func alphaString46(s: String){
+    
+    
+    
+}
+//어떤 수를 입력받아 그 수의 약수를 모두 더한 수 sumDivisor 함수를 완성해 보세요.
+//예를 들어 12가 입력된다면 12의 약수는 [1, 2, 3, 4, 6, 12]가 되고, 총 합은 28이 되므로 28을 반환해 주면 됩니다.
+func sumDivisor(num: Int){
+    
+    
+}
+
+//numPY함수는 대문자와 소문자가 섞여있는 문자열 s를 매개변수로 입력받습니다.
+//s에 'p'의 개수와 'y'의 개수를 비교해 같으면 True, 다르면 False를 리턴하도록 함수를 완성하세요.
+//'p', 'y' 모두 하나도 없는 경우는 항상 True를 리턴합니다.
+//예를들어 s가 "pPoooyY"면 True를 리턴하고 "Pyy"라면 False를 리턴합니다.
+func numPY(){
+    
+    
+}
+
+
+//divisible 메소드는 int형 배열 array와 int divisor를 매개변수로 받습니다.
+//array의 각 element 중 divisor로 나누어 떨어지는 값만 포함하는 새로운 배열을 만들어서 반환하도록 divisible에 코드를 작성해 보세요.
+//
+//예를들어 array가 {5, 9, 7, 10}이고 divisor가 5이면 {5, 10}을 리턴해야 합니다.
+func divisible(array: [Int], divisor: Int){
+    
+    
+}
+
+
+//number_generator함수는 x와 n을 입력 받습니다.
+//2와 5를 입력 받으면 2부터 시작해서 2씩 증가하는 숫자를 5개 가지는 리스트를 만들어서 리턴합니다.
+//[2,4,6,8,10]
+//
+//4와 3을 입력 받으면 4부터 시작해서 4씩 증가하는 숫자를 3개 가지는 리스트를 만들어서 리턴합니다.
+//[4,8,12]
+//
+//이를 일반화 하면 x부터 시작해서 x씩 증가하는 숫자를 n개 가지는 리스트를 리턴하도록 함수 number_generator를 완성하면 됩니다
+func numberGenerator(x: Int, n: Int){
+    
+    
+}
+
+
+//strange_sort함수는 strings와 n이라는 매개변수를 받아들입니다.
+//strings는 문자열로 구성된 리스트인데, 각 문자열을 인덱스 n인 글자를 기준으로 정렬하면 됩니다.
+//
+//예를들어 strings가 ["sun", "bed", "car"]이고 n이 1이면 각 단어의 인덱스 1인 문자 u, e ,a를 기준으로 정렬해야 하므로 결과는 ["car", "bed", "sun"]이 됩니다.
+//strange_sort함수를 완성해 보세요.
+func strangeSort(strings: String, n: Int){
+    
+    
+}
 
 

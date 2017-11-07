@@ -47,7 +47,7 @@ func sumDigit(number: Int) {
 sumDigit(number: 1234)
 </pre>
 
-##제곱근 판별
+## 제곱근 판별
 
 ### 문제
 > nextSqaure함수는 정수 n을 매개변수로 입력받습니다.

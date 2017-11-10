@@ -39,7 +39,7 @@ func search(list: [Int],total: Int, target: Int) -> Int{
 > 파라미터가 많다는것이 좋은것 만은 아니기떄문에 일반 함수에서는 암시적인 파라미터 사용도 괜찮다.
 
 
-> Recusion 중에 반환 값을 명시적으로 사용해야 **아래 예**와 같이 바로 반환 해줄 수 있기 떄문에 명시적인 파라미터 사용을 권장.(Recursion 함수)
+> Recusion 중에 반환 값을 명시적으로 사용해야 **아래 예**와 같이 바로 반환 해줄 수 있기 떄문에 명시적인 파라미터 사용을 권장.(Recursion 함수) 
 
 ```
 // 순차 탐색, 명시적 파라미터를 사용
@@ -50,8 +50,16 @@ func search(list: [Int], start: Int, end: Int, target: Int) -> {
 	}else if (target == list[start){
 		return start
 	}else{
-		return search(data, start+1, end, target)
+		return search(data, start+1, end, target)// <-- 명시적으로 암시해줘야 되여.. 다음 호출 할때.
 	}
 
 }
 ```
+
+- Recusion 구현 **기본 원칙** : Recusion을 구현할때 암시적 파라미터를 사용 할 것.
+
+	- 가장 첫 시점에서 search를 호출 할 경우.
+		- search(list: list,start: 0,end: n-1,target: target) 과 같이 호출 하게 되면, 위의 일반 search함수와 동일한 일을 첫번째 호출에서 시행한다.
+		- 하지만, 두번째 Recusion 부터는 start: 1 로 호출이 되게 되는데, 일반 함수의 경우 암시적으로 시작 지점을 사용하기 떄문에 이렇게 진행 하기가 힘들다.
+	- 무조건은 아님, Recursion이 반복 됨에 있어 변경 되지 않는 파라미터(예시에는 end.)는 생략해도 상관은 없다.
+

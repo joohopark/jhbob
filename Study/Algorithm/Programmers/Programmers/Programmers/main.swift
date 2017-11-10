@@ -253,34 +253,65 @@ import Foundation
 // temp1 과 temp2의 값을 비교. 최소 값을 한쪽에 몰고 변수 하나만 값을 계속 검색하여 변경.
 // 최소 최대 값 같이 구한 후에 공백 붙여서 리턴.
 
-func getMinMaxString(str: String){
+//자리수가 존재할경우, 부호가 붙어있는 경우도 모두 고려해야함.
 
-    
-    // 최소값
-    
-    // 최대값
-    
-}
-
-
-//두 수를 입력받아 두 수의 최대공약수와 최소공배수를 반환해주는 gcdlcm 함수를 완성해 보세요.
-//배열의 맨 앞에 최대공약수, 그 다음 최소공배수를 넣어 반환하면 됩니다. 예를 들어 gcdlcm(3,12) 가 입력되면, [3, 12]를 반환해주면 됩니다.
-func gcdlcm(fir: Int, sec: Int){
-    
-    
-}
-
-
-//행렬의 덧셈은 행과 열의 크기가 같은 두 행렬의 같은 행, 같은 열의 값을 서로 더한 결과가 됩니다.
-//2개의 행렬을 입력받는 sumMatrix 함수를 완성하여 행렬 덧셈의 결과를 반환해 주세요.
 //
-//예를 들어 2x2 행렬인 A = ((1, 2), (2, 3)), B = ((3, 4), (5, 6)) 가 주어지면, 같은 2x2 행렬인 ((4, 6), (7, 9))를 반환하면 됩니다.(어떠한 행렬에도 대응하는 함수를 완성해주세요.)
-//func matrixAdd(){
+//func getMinMaxString(str: String){
+//
+//    var temp1: String = ""
+//    var temp2: String = ""
+//    //var isNotChange = true
 //
 //
 //}
-// swift가 2차원 배열이 돼나???
+//
+//getMinMaxString(str: "11 12")
 
+//두 수를 입력받아 두 수의 최대공약수와 최소공배수를 반환해주는 gcdlcm 함수를 완성해 보세요.
+//배열의 맨 앞에 최대공약수, 그 다음 최소공배수를 넣어 반환하면 됩니다. 예를 들어 gcdlcm(3,12) 가 입력되면, [3, 12]를 반환해주면 됩니다.
+
+//입력으로 두 수 m,n(m>n)이 들어온다.
+//n이 0이라면, m을 출력하고 알고리즘을 종료한다.
+//m이 n으로 나누어 떨어지면, n을 출력하고 알고리즘을 종료한다.
+//그렇지 않으면, m을 n으로 나눈 나머지를 새롭게 m에 대입하고, m과 n을 바꾸고 3번으로 돌아온다.
+// 최소 공배수의 경우 아래의 성질을 사용하여 구한다.
+//m * n = gcd * gcm
+//
+//func gcdlcm(fir: Int, sec: Int) -> [Int]{
+//
+//    var temp = 0
+//    var first = fir
+//    var second = sec
+//    var isKeepGo = true
+//    var listResult: [Int] = []
+//
+//    if first < second{
+//
+//        temp = second
+//        second = first
+//        first = temp
+//    }// 큰수가 first에 오도록.. first > second
+//
+//
+//    while isKeepGo{
+//        if first % second == 0{
+//            isKeepGo = false
+//            listResult.append(second)
+//        }else{
+//            first = first % second
+//        }
+//    }// second는 최대 공약수임...
+//
+//    //m * n = gcd * gcm
+//
+//    listResult.append(fir*sec/second)
+//
+//
+//
+//    return listResult
+//}
+//
+//print(gcdlcm(fir: 60, sec: 6))
 
 //rm_small함수는 list타입 변수 mylist을 매개변수로 입력받습니다.
 //mylist 에서 가장 작은 수를 제거한 리스트를 리턴하고, mylist의 원소가 1개 이하인 경우는 []를 리턴하는 함수를 완성하세요.
@@ -321,11 +352,31 @@ func sortDictionary(){
 //alpha_string46함수는 문자열 s를 매개변수로 입력받습니다.
 //s의 길이가 4혹은 6이고, 숫자로만 구성되있는지 확인해주는 함수를 완성하세요.
 //예를들어 s가 "a234"이면 False를 리턴하고 "1234"라면 True를 리턴하면 됩니다
-func alphaString46(s: String){
-    
-    
-    
-}
+
+// 길이를 먼저 체크한다.
+// 길이 체크 후, Int로 형변환, 형변환 실패시 알파벳이 포함된 문자열임.
+//func alphaString46(s: String) -> String{
+//
+//    var checkInt: String = ""
+//
+//    if s.count == 4 || s.count == 6{
+//
+//        for char in s{
+//            checkInt.append(char)
+//        }
+//
+//    }else{
+//        return "False"
+//    }
+//
+//    if let _ = Int(checkInt){
+//        return "True"
+//    }
+//    return "False"
+//}
+//
+//print(alphaString46(s: "a234"))
+
 //어떤 수를 입력받아 그 수의 약수를 모두 더한 수 sumDivisor 함수를 완성해 보세요.
 //예를 들어 12가 입력된다면 12의 약수는 [1, 2, 3, 4, 6, 12]가 되고, 총 합은 28이 되므로 28을 반환해 주면 됩니다.
 func sumDivisor(num: Int){
@@ -361,11 +412,20 @@ func divisible(array: [Int], divisor: Int){
 //[4,8,12]
 //
 //이를 일반화 하면 x부터 시작해서 x씩 증가하는 숫자를 n개 가지는 리스트를 리턴하도록 함수 number_generator를 완성하면 됩니다
-func numberGenerator(x: Int, n: Int){
-    
-    
-}
-
+//func numberGenerator(x: Int, n: Int){
+//
+//    var inputX = x
+//    var listResult:[Int] = []
+//
+//    for _ in 0..<n{
+//        listResult.append(inputX)
+//        inputX += inputX
+//    }
+//
+//    print(listResult)
+//}
+//
+//numberGenerator(x: 2, n: 5)
 
 //strange_sort함수는 strings와 n이라는 매개변수를 받아들입니다.
 //strings는 문자열로 구성된 리스트인데, 각 문자열을 인덱스 n인 글자를 기준으로 정렬하면 됩니다.

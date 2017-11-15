@@ -316,23 +316,81 @@ import Foundation
 //rm_small함수는 list타입 변수 mylist을 매개변수로 입력받습니다.
 //mylist 에서 가장 작은 수를 제거한 리스트를 리턴하고, mylist의 원소가 1개 이하인 경우는 []를 리턴하는 함수를 완성하세요.
 //예를들어 mylist가 [4,3,2,1]인 경우는 [4,3,2]를 리턴 하고, [10, 8, 22]면 [10, 22]를 리턴 합니다.
-func rmSmall(mylist: Int){
-    
-    
-}
+
+//원소가 1개 이하인 경우. 비어있는 list 반환
+//원소중 가장 작은수를 탐색 후 삭제한 리스트 반환.
+
+//func rmSmall(mylist: [Int]) -> [Int]{
+//
+//    var temp: Int = 0
+//    var listResult = mylist
+//
+//
+//    if listResult.count == 0{
+//
+//        return []
+//    }
+//
+//    for elem in listResult{
+//
+//        if temp == 0 || temp > elem{
+//            temp = elem
+//        }
+//
+//
+//    }
+//
+//    for index in 0..<listResult.count{
+//
+//        if listResult[index] == temp{
+//            listResult.remove(at: index)
+//        }
+//
+//    }
+//
+//
+//    return listResult
+//}
+//
+//print(rmSmall(mylist: [4,3,5,2,1]))
 
 //no_continuous함수는 스트링 s를 매개변수로 입력받습니다.
 //
-//s의 글자들의 순서를 유지하면서, 글자들 중 연속적으로 나타나는 아이템은 제거된 배열(파이썬은 list)을 리턴하도록 함수를 완성하세요.
+//s의 글자들의 순서를 유지하면  서, 글자들 중 연속적으로 나타나는 아이템은 제거된 배열(파이썬은 list)을 리턴하도록 함수를 완성하세요.
 //예를들어 다음과 같이 동작하면 됩니다.
 //
 //s가 '133303'이라면 ['1', '3', '0', '3']를 리턴
 //s가 '47330'이라면 [4, 7, 3, 0]을 리턴
-func noContinuous(s: String){
-    
-    
-}
 
+
+//1. 배열을 순차적으로 탐색
+//2. 탐색시의 element는 temp 변수에 보관.
+//3. temp와 탐색 element를 비교.
+//4. 동일할 경우 element를 "-" 으로 변경
+//5. "-"이 아닌 값을 결과 배열에 넣어 반환.
+
+//func noContinuous(s: String){
+//
+//    var listReturn: [Int] = []
+//    var temp: Int?
+//
+//    for element in s{
+//
+//        if let _ = temp{
+//            if String(temp!) != String(element){//둘째 부터..값이 같지 않다면 반환 배열에 값을 넣는다.
+//                listReturn.append(temp!)
+//               temp = Int(String(element))// 배열에 값을 넣고 temp값을 변경.
+//            }
+//        }else{
+//               temp = Int(String(element))// 처음 일때.,,, character는 Int로 바로 변환이 안되서 String -> Int로 사용해야되는듯..
+//        }
+//
+//    }
+//
+//    print(listReturn)
+//}
+//
+//noContinuous(s: "130333")
 
 //딕셔너리는 들어있는 값에 순서가 없지만, 키를 기준으로 정렬하고 싶습니다. 그래서 키와 값을 튜플로 구성하고, 이를 순서대로 리스트에 넣으려고 합니다.
 //예를들어 {"김철수":78, "이하나":97, "정진원":88}이 있다면 각각의 키와 값을
@@ -344,7 +402,12 @@ func noContinuous(s: String){
 //[ ("김철수", 78), ("이하나", 97), ("정진원", 88) ]
 //
 //다음 sort_dictionary 함수를 완성해 보세요.
-func sortDictionary(){
+
+//1. 딕셔너리를 튜플로 변환
+//2. 변환후 키를 기준으로 오름차순으로 배열에 넣는다.
+
+func sortDictionary(dic: [String: Int]){
+    
     
     
 }

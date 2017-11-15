@@ -2,6 +2,7 @@
  
 ## Step 0.
 
+
 - 기초 문법
 	- [변수, 상수](https://github.com/joohopark/jhbob/blob/master/Study/SwiftBasic_var_let.md)
 	- [if, Switch, guard : 조건문](https://github.com/joohopark/jhbob/blob/master/Study/SwiftBasic_if_switch.md)
@@ -37,4 +38,4 @@
 
 - MIT 아재의 컴피타 이야기.
 
-- [시간복잡도]()
+- [시간복잡도](https://github.com/joohopark/jhbob/blob/master/Study/TimeComplexity.md)

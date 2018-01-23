@@ -10,7 +10,9 @@
 	- [Function](https://github.com/joohopark/jhbob/blob/master/Study/SwiftBasic_func.md)
 
 ## Step 1.
+
 	- [Class, Structure, inheritance](https://github.com/joohopark/jhbob/blob/master/Study/SwiftMid_ClaVStru.md)
+
 
 ## Step 2.
 

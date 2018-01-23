@@ -8,6 +8,7 @@
 	- [if, Switch, guard : 조건문](https://github.com/joohopark/jhbob/blob/master/Study/SwiftBasic_if_switch.md)
 	- [for in, while : 반복문](https://github.com/joohopark/jhbob/blob/master/Study/SwiftBasic_for_while.md)
 	- [Function](https://github.com/joohopark/jhbob/blob/master/Study/SwiftBasic_func.md)
+	- [Class, Structure, inheritance](https://github.com/joohopark/jhbob/blob/master/Study/SwiftMid_ClaVStru.md)
 
 ## Step 1.
 

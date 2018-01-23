@@ -11,7 +11,7 @@
 
 ## Step 1.
 
-- 고오급 문법
+	- [Class와 Structure](https://github.com/joohopark/jhbob/blob/master/Study/SwiftMid_ClaVStru.md)
 
 
 ## Step 2.

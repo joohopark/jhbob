@@ -28,7 +28,7 @@
 	- [Recursive, 재귀가 뭐임?](https://github.com/joohopark/jhbob/blob/master/Study/Recursive/Recursive01.md)
 	- [Recursive Think!](https://github.com/joohopark/jhbob/blob/master/Study/Recursive/Recursive02.md)
 	- [Designing Recursion](https://github.com/joohopark/jhbob/blob/master/Study/Recursive/Recursive03.md)
-
+	- [Maze, FindPath](https://github.com/joohopark/jhbob/blob/master/Study/Algorithm/maze_findPath.md)
 - Algorithm
 	- [Programmers Level 01](https://github.com/joohopark/jhbob/blob/master/Study/Algorithm/Programmers/Programmers01.md)
 	- [Programmers Level 02]()

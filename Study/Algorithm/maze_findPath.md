@@ -1,0 +1,89 @@
+# 미로찾기
+
+## 조건.
+
+입구 : (0,0)
+
+출구 : (n-1, n-1)
+
+- 지나갈 수 있는 길 : pathway
+- 지나 갈 수 없는 길 : wall
+- 지나 가본 길 : visited
+	- 지나 왔던 길, 출구까지 갈 수 없는 길 : blockway
+	- 지나 왔던 길, 출구까지 갈수 있는 길 : path
+
+## Recusive Thinking
+
+현재 위치에서 출구까지 가려면.
+
+- Base case
+	- 현재 위치가 출구인 경우.(= 좌표가 n-1,n-1인 경우.)
+	- 지나갈수 없는 경우. (=셀의 값이 0이 아닌 경우.)
+	- 지나갈수 없는 이유가 입구, 출구의 범위를 벗어났을 경우.( = 0,0 || n-1.n-1 의 좌표를 넘어서 이동하려 하는 경우.)
+- Recusion case
+	- 현재 위치가 출구가 아니고, 양옆 좌표로 이동이 가능한 경우.
+	- 현재 위치가 출구가 아니고, 양옆 좌표로도 이동이 불가능 한 경우. 즉, 출구를 찾을수 없는경우. 
+
+<pre>
+class Maze{
+
+    var n = 8
+    var maze: [[Int]] =
+    [[0,0,0,0,0,0,0,1],
+     [0,1,1,0,1,1,0,1],
+     [0,0,0,1,0,0,0,1],
+     [0,1,0,0,1,1,0,0],
+     [0,1,1,1,0,0,1,1],
+     [0,1,0,0,0,1,0,1],
+     [0,0,0,1,0,0,0,1],
+     [0,1,1,1,0,1,0,0]]
+    
+    
+    let pathWay = 0// 지나갈수 있는 길, 아직 지나치지 않은 길
+    let wall = 1// 지나 갈수 없는 길
+    
+    //visited way 2, 3
+    let blockWay = 2// 지나왔던 길, 출구까지 갈수 없는 길.
+    let path = 3// 출구까지의 올바른 길.
+
+    
+    func findPath(x: Int, y: Int)-> Bool{
+        
+        // Base case
+        if (x<0 || y<0 || x>=n || y>=n){// 입구가 아니거나 출구가 아닌곳으로 이동할 경우 함수 스택 pop.
+            
+            return false
+            
+        }else if (maze[x][y] != pathWay){// 지나 갈수 없을 경우 함수 스택 pop
+            
+            return false
+            
+        }else if (x==n-1 && y==n-1){// 현재 위치가 출구인 경우
+            
+            maze[x][y] = path
+            print("find exit!!")
+            return true
+            
+        }else{//Recusive Case, 현재 위치가 출구가 아니고, 양옆 좌표로 이동이 가능한지를 확인.
+            maze[x][y] = path
+            if (findPath(x: x-1, y: y)) || findPath(x: x, y: y+1) || findPath(x: x+1, y: y) || findPath(x: x, y: y-1){
+                return true
+            }
+            
+            maze[x][y] = blockWay// 현재 위치가 출구가 아니고, 양옆 좌표로도 이동이 불가능 한 경우 -> 출구를 찾을수 없는경우. 지나갈수 없는 길로 표시한 후 함수 스택 pop
+            return false
+        }
+        
+    }
+}
+
+
+
+let maze: Maze = Maze()
+
+print(maze.maze)
+maze.findPath(x: 0, y: 0)
+print(maze.maze)
+</pre>
+
+

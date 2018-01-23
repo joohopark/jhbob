@@ -11,7 +11,7 @@
 
 ## Step 1.
 
-
+- 기초는 아닌듯한 문법
 	- [Class, Structure, inheritance](https://github.com/joohopark/jhbob/blob/master/Study/SwiftMid_ClaVStru.md)
 
 

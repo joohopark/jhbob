@@ -440,61 +440,61 @@ func sortDictionary(dic: [String: Int]){
 //
 //print(alphaString46(s: "a234"))
 
-//어떤 수를 입력받아 그 수의 약수를 모두 더한 수 sumDivisor 함수를 완성해 보세요.
-//예를 들어 12가 입력된다면 12의 약수는 [1, 2, 3, 4, 6, 12]가 되고, 총 합은 28이 되므로 28을 반환해 주면 됩니다.
+어떤 수를 입력받아 그 수의 약수를 모두 더한 수 sumDivisor 함수를 완성해 보세요.
+예를 들어 12가 입력된다면 12의 약수는 [1, 2, 3, 4, 6, 12]가 되고, 총 합은 28이 되므로 28을 반환해 주면 됩니다.
 func sumDivisor(num: Int){
     
     
 }
 
-//numPY함수는 대문자와 소문자가 섞여있는 문자열 s를 매개변수로 입력받습니다.
-//s에 'p'의 개수와 'y'의 개수를 비교해 같으면 True, 다르면 False를 리턴하도록 함수를 완성하세요.
-//'p', 'y' 모두 하나도 없는 경우는 항상 True를 리턴합니다.
-//예를들어 s가 "pPoooyY"면 True를 리턴하고 "Pyy"라면 False를 리턴합니다.
+numPY함수는 대문자와 소문자가 섞여있는 문자열 s를 매개변수로 입력받습니다.
+s에 'p'의 개수와 'y'의 개수를 비교해 같으면 True, 다르면 False를 리턴하도록 함수를 완성하세요.
+'p', 'y' 모두 하나도 없는 경우는 항상 True를 리턴합니다.
+예를들어 s가 "pPoooyY"면 True를 리턴하고 "Pyy"라면 False를 리턴합니다.
 func numPY(){
     
     
 }
 
 
-//divisible 메소드는 int형 배열 array와 int divisor를 매개변수로 받습니다.
-//array의 각 element 중 divisor로 나누어 떨어지는 값만 포함하는 새로운 배열을 만들어서 반환하도록 divisible에 코드를 작성해 보세요.
-//
-//예를들어 array가 {5, 9, 7, 10}이고 divisor가 5이면 {5, 10}을 리턴해야 합니다.
+divisible 메소드는 int형 배열 array와 int divisor를 매개변수로 받습니다.
+array의 각 element 중 divisor로 나누어 떨어지는 값만 포함하는 새로운 배열을 만들어서 반환하도록 divisible에 코드를 작성해 보세요.
+
+예를들어 array가 {5, 9, 7, 10}이고 divisor가 5이면 {5, 10}을 리턴해야 합니다.
 func divisible(array: [Int], divisor: Int){
     
     
 }
 
 
-//number_generator함수는 x와 n을 입력 받습니다.
-//2와 5를 입력 받으면 2부터 시작해서 2씩 증가하는 숫자를 5개 가지는 리스트를 만들어서 리턴합니다.
-//[2,4,6,8,10]
-//
-//4와 3을 입력 받으면 4부터 시작해서 4씩 증가하는 숫자를 3개 가지는 리스트를 만들어서 리턴합니다.
-//[4,8,12]
-//
-//이를 일반화 하면 x부터 시작해서 x씩 증가하는 숫자를 n개 가지는 리스트를 리턴하도록 함수 number_generator를 완성하면 됩니다
-//func numberGenerator(x: Int, n: Int){
-//
-//    var inputX = x
-//    var listResult:[Int] = []
-//
-//    for _ in 0..<n{
-//        listResult.append(inputX)
-//        inputX += inputX
-//    }
-//
-//    print(listResult)
-//}
-//
-//numberGenerator(x: 2, n: 5)
+number_generator함수는 x와 n을 입력 받습니다.
+2와 5를 입력 받으면 2부터 시작해서 2씩 증가하는 숫자를 5개 가지는 리스트를 만들어서 리턴합니다.
+[2,4,6,8,10]
 
-//strange_sort함수는 strings와 n이라는 매개변수를 받아들입니다.
-//strings는 문자열로 구성된 리스트인데, 각 문자열을 인덱스 n인 글자를 기준으로 정렬하면 됩니다.
-//
-//예를들어 strings가 ["sun", "bed", "car"]이고 n이 1이면 각 단어의 인덱스 1인 문자 u, e ,a를 기준으로 정렬해야 하므로 결과는 ["car", "bed", "sun"]이 됩니다.
-//strange_sort함수를 완성해 보세요.
+4와 3을 입력 받으면 4부터 시작해서 4씩 증가하는 숫자를 3개 가지는 리스트를 만들어서 리턴합니다.
+[4,8,12]
+
+이를 일반화 하면 x부터 시작해서 x씩 증가하는 숫자를 n개 가지는 리스트를 리턴하도록 함수 number_generator를 완성하면 됩니다
+func numberGenerator(x: Int, n: Int){
+
+    var inputX = x
+    var listResult:[Int] = []
+
+    for _ in 0..<n{
+        listResult.append(inputX)
+        inputX += inputX
+    }
+
+    print(listResult)
+}
+
+numberGenerator(x: 2, n: 5)
+
+strange_sort함수는 strings와 n이라는 매개변수를 받아들입니다.
+strings는 문자열로 구성된 리스트인데, 각 문자열을 인덱스 n인 글자를 기준으로 정렬하면 됩니다.
+
+예를들어 strings가 ["sun", "bed", "car"]이고 n이 1이면 각 단어의 인덱스 1인 문자 u, e ,a를 기준으로 정렬해야 하므로 결과는 ["car", "bed", "sun"]이 됩니다.
+strange_sort함수를 완성해 보세요.
 func strangeSort(strings: String, n: Int){
     
     

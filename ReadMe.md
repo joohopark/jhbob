@@ -19,10 +19,6 @@
 
 - 구현 패턴
 	
-## Step 3.
-
-- App LifeCycle
-
 ## extension
 
 - 코드의 가독성을 높이자!
@@ -34,11 +30,8 @@
 - Algorithm
 	- [Programmers Level 01](https://github.com/joohopark/jhbob/blob/master/Study/Algorithm/Programmers/Programmers01.md)
 	- [Programmers Level 02]()
-	- [BaekJoon]()
 	- [FastCamp](https://github.com/joohopark/jhbob/blob/master/Study/Algorithm/fastcamp/Swift_Array.md)
 
 - Apple Docs 해석 및 정리.
-
-- Sketch로 ProtoType 제작.(나만의 방법론)
 
 - [시간복잡도](https://github.com/joohopark/jhbob/blob/master/Study/TimeComplexity.md)

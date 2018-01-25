@@ -75,14 +75,14 @@ func harshad(input : Int) -> (Int,Bool)	{
                 }
             }
         }
-        for i in 0..<bList.count{// B 배열 내림 차순으로 정렬.
-            for n in i+1..<bList.count{
+        for i in 0 ..< bList.count{// B 배열 내림 차순으로 정렬.
+            for n in i+1 ..< bList.count{
                 if bList[i] < bList[n]{
                     bList.swapAt(i, n)
                 }
             }
         }
-        for i in 0..<aList.count{
+        for i in 0 ..< aList.count{
            resVal += aList[i] * bList[i]
         }
         return resVal

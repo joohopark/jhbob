@@ -12,8 +12,8 @@
 ## Step 1.
 
 - 기초는 아닌듯한 문법
-	- [Class, Structure, 공통,차이점.. inheritance](https://github.com/joohopark/jhbob/blob/master/Study/SwiftMid_ClaVStru.md)
-
+	- [Class, Structure, 공통,차이점../ 값vs참조타입/ inheritance](https://github.com/joohopark/jhbob/blob/master/Study/SwiftMid_ClaVStru.md)
+	- [Optional] ()
 
 ## Step 2.
 

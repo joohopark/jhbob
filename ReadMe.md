@@ -16,9 +16,6 @@
 	- [Optional](https://github.com/joohopark/jhbob/blob/master/Study/SwiftMid_Optional.md)
 	- [접근제어/ Property/ Property Observer](https://github.com/joohopark/jhbob/blob/master/Study/SwiftMid_proper_observer.md)
 
-## Step 2.
-
-- 구현 패턴
 	
 ## extension
 

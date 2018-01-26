@@ -135,9 +135,9 @@ func allPrimeNumber(endNum: Int){
                 
             }// 비교를 위해 0으로 변경된 값은 출력 배열로 옮기지 않는다.
             
-            for b in 1..<endNum{
+            for b in 1 ..< endNum{
                 if endNum >= b*ptr {
-                    listInputVal[b*ptr-1] = 0
+                    listInputVal[b * ptr-1] = 0
                 }
             }//ptr 의 배수들을 비교에서 제외 하기 위해 값을 0으로 변경
             ptr += 1//ptr 1 증가.

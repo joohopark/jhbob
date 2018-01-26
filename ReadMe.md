@@ -14,8 +14,7 @@
 - 기초는 아닌듯한 문법
 	- [Class, Structure, 공통,차이점../ 값vs참조타입/ inheritance](https://github.com/joohopark/jhbob/blob/master/Study/SwiftMid_ClaVStru.md)
 	- [Optional](https://github.com/joohopark/jhbob/blob/master/Study/SwiftMid_Optional.md)
-	- [접근제어/ Property/ Property Observer](https://github.com/joohopark/jhbob/blob/master/Study/SwiftBasic_proper_Observer.md)
-
+	- [접근제어/ Property/ Property Observer] (https://github.com/joohopark/jhbob/blob/master/Study/SwiftMid_proper_observer.md
 ## Step 2.
 
 - 구현 패턴

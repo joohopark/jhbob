@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var resultLb: UILabel!
+    var numTemp: Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

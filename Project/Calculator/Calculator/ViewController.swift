@@ -10,12 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //
     
     
     
     @IBOutlet weak var resultLb: UILabel!
-    var numTemp: Int = 0
-    
+    var numTemp: String = ""
+    var outputTemp: String = ""
+    var oper: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +27,32 @@ class ViewController: UIViewController {
 
    
     @IBAction func clickButton(_ sender: RoundButton){
+        
+        if sender.tag <= 9 && sender.tag >= 0{
+            
+            numTemp += String(sender.tag)
+        }
     
     }
 
+    @IBAction func clickOper(_ sender: RoundButton){
+        
+        if sender.titleLabel!.text == "=" && oper != ""{// 결과값 구해야 하는 경우.
+            
+        }
+        
+        switch sender.titleLabel!.text {
+        case "+":
+            <#code#>
+        default:
+            <#code#>
+        }
+        
+    }
     
     @IBAction func allClear(_ sender: RoundButton) {
     
+        
     }
     
     

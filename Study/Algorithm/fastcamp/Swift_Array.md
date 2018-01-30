@@ -65,11 +65,9 @@ print(removeDuple(list: [1,2,3,4,4,4,4,4]))
 <pre>
 func makeList(list: [Int]) -> [[Int]]{
     var resList: [[Int]] = []
-    for firstNum in 0..<list.count{
-        for secNum in firstNum+1..<list.count{
-            
+    for firstNum in 0 ..< list.count{
+        for secNum in firstNum+1 ..< list.count{
             resList.append([list[firstNum],list[secNum]])
-            
         }
         
     }

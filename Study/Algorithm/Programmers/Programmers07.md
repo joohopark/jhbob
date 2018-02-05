@@ -51,14 +51,16 @@ queens(level){// 파라미터: 현재 탐색 중인 노드의 위치
 
 
 
+## 까다로웠던..
+- 유망성 테스트를 진행 할때 재귀를 돌면서 호출된다고 생각하면서 입력값(level)을 내부에서 잘못 생각해 인덱스가 아닌 값자체로 생각하고 비교해서 하루 고민...
+- 재귀를 돌기전 자식노드 탐색을 진행 함을 알면서도 level 인덱스의 값을 넣어주고 유망성 테스트에서 있지도 않는 자식 노드 값 탐색.... 이것때문에 한 2일 날린듯...
 
 
 
 
 
 
-
-note
+####note
 <pre>
 State Space Tree
 트리의 hierarchy가 밑으로 내려갈수록 상위 노드에서부터 하위 노드까지의 모든 경우의 수를 표현 하는 트리.
@@ -80,48 +82,47 @@ DFS, Depth First Search
 </pre>
 
 <pre>
-if 이 노드가 유망한가? 계속 탐색 : 리턴( 유망하지 않음을 체크하고..)
-if 현재 방문한 노드가 찾고있던 경우의 수인가? 답 출력 : 리턴
-그것도 아니라면 자식 노드를 계속 탐색.
+    var cols: [Int] = [0,0,0,0,0]// N = 4, [ 2, 4, 1, 3]
+    var N: Int = 4
+    var colsCnt = 0
 
-- 매개변수는 탐색 할 노드, 트리의 각 행, 각 행들의 열 을 통해 현재 노드들의 위치를 전달 할 수 있다.
-
-- 행 (level 또는 stage로 표현)이 증가 했다라는 것은, level - 1개의 말이 현재 정렬이 되었다 라는 뜻과 동일.
-
-
-var cols:[Int] = []//현재 탐색에 성공한 말들의 위치의 열들이 각 인덱스마다 추가됨. 인덱스 == level
-**func queens() -> Bool{
-
-if !promissing(level){
-	return false
-}else if level == N{//N은 목표 level
-	return true
-}
-
-for i in 1...N{
-	cols[level+1] = i
-	if (queens(level+1)){
-		return true
-	}
-}
-
-return false// 현재 시도중에는 말을 놓을 수 있는 열이 존재 하지 않다.
-}
-
-유망성 Test
-
-func promissing(level : Int){
-	
-	for i in 1...level{
-		if cols[i] == cols[level]{// 상위 level( 현제 0~level-1 까지)과 같은 열에 위치 하게 되는지 검사
-			return false
-		}else if level - i == |cols[level]-cols[i]|{// 대각선인지 구하는 공식.
-		
-		}//같은 대각선에 있는지 검사
-	}
-	return true
-}
-**</pre>
+    
+    func nqueen(level: Int) -> Bool {
+        
+        if !promissing(level: level){// 현재 탐색 노드와 부모 노드가 조건에 맞는지 확인.
+            return false
+        }else if level == N{// 현 탐색 노드가 조건에 맞는 노드인지 확인, 실제적으로 level은 N-1 까지만 아래 if를 타도록.
+            print(cols)
+            return true
+        }else{//현재 탐색 노드의 부모 노드가 조건에 맞으니 현재 level의 노드에 대한 탐색.
+            for n in 1...N{
+                // 현재 탐색중 level의 자식에서의 열 값을 정한다 == cols 배열에 알맞는 값을 넣는다.
+                cols[level+1] = n
+                if nqueen(level: level+1){// 윗줄에서 인덱스에 넣은 값이 조건에 맞지 않을경우 회귀후 또 값을 변경하여 넣는다.
+                    return true// 자식에 넣을 수 있고 지속 진행.
+                }
+            }
+        }
+        return false
+    }
+    
+    
+    func promissing(level: Int) -> Bool{
+        
+        if level != 0{
+            for index in 0 ..< level{
+                if cols[index]/*상위 노드*/ == cols[level]/*현재 탐색 예정 노드*/{// 상위 노드들과 열이 겹치는지 확인.
+                    print("\(level) promissing Test 중 \(index)와 값이 같음.")
+                    return false
+                }else if level - index/*세로*/ == abs(cols[level] - cols[index]/*가로*/){//각 행의 말과 대각선에 위치하는지 확인.
+                    print("\(level) promissing Test 중 \(index)행의 값과 대각을 이룸.")
+                    return false
+                }
+            }
+        }
+        return true
+    }
+</pre>
 
 
 ###Reference

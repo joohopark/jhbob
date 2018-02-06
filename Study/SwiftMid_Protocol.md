@@ -1,4 +1,4 @@
-# Application Life Cycle / UITextField / Protocol / Delegate
+# Application Life Cycle / UITextField / Protocol / Delegate / UIScrollView
 
 ## The Structure of an App
 
@@ -129,39 +129,73 @@ command + shift + k = App 구동시 키보드 소환.
 
 ## Protocol
 
-- 프로토콜은 원하는 작업이나 기능을 구현되도록 메서드, 프로퍼티등으로 요구 사항의 청사진을 정의합니다.
+- 프로토콜은 원하는 작업이나 기능을 구현되도록 **메서드, 프로퍼티등으로 요구 사항의 청사진 혹은 구현해야되는 명세서같은것을 미리 정해서 정의내려놓는 개념.**
 - 클래스, 구조체, 열거형은 프로토콜을 채택하면, 프로토콜에서 요구한 사항에 대해 구현해야 됩니다.
 - 프로토콜을 통해 공통적인 작업을 강제 할수 있으며, 해당 프로토콜을 채택한 사람이 구현한 메소드에 대한 정보도 알수 있다.
-- 구현 안되 있지만 이렇게 만들어라 혹은 만들겠다는 약속
+- 구현 안되 있지만 이렇게 만들어라 혹은 만들겠다는 약속.
 - 클래스, 구조체, 열거형은 프로토콜 채택시 프로토콜에서 요구 사항을 구현해야 함.
 - 공통 작업을 강제 가능, 함수명, 리턴, 매개변수에 대한 강제성이 존재함.
+- 프로토콜 또한 프로토콜을 채택 할 수 있다.
 
+
+- **프로토콜을 채택했다 라는것은 사용하는 입장, 결국엔 구현을 해야한다.**
+- **프로토콜을 작성했다 라는것은 제시하는 입장, 구현해야되는 내용을 제시해야한다.**
+- 다른 의사소통없이 다수의 개발자가 큰 프로젝트의 일부들을 분업하여 만들 수 있는 설계적인 입장에서의 방법론.
 
 <pre>
-Protocol example
+//Protocol example
 
 protocol Runable {
 	var regCount:Int {get set}
-	func run()
-}
- 
-class Animal: Runable{
-	var regCount:Int = 0
-	func run()
+	func run() 
 }
 
+protocol Flying :Runable {
+	var wingCount:Int {get set} 
+}
 
-// 프로토콜의 프로퍼티는 모두 연산 프로퍼티의 형을 갖고 있어야한다.
-// get, set
+class Animal: Flying{
+	var wingCount: Int = 0 
+	var regCount:Int = 0 func run(){
+	} 
+}
+
+// 프로토콜의 프로퍼티는 모두 연산 프로퍼티의 형을 갖고 있지만, 연산 프로퍼티를 명시한것은 아님.
 // 프로토콜에서는 접근제한자는 사용 할 수 없다.
 
+//NSObjectProtocol을 채택하지 않은 경우에는 optional을 사용할 수 없다.
 </pre>
 
 - 추상 클래스의 Protocol
 	- 프로토콜을 채택 한 클래스의 인스턴스들은 그 프로토콜을 채택 받았다라고 표현함.
 	- 상속은 하나밖에 못 받지만 채택은 여러가지 채택이 가능함.
+<pre>
+프로토콜을 추상 클래스처럼 사용할수 있다.
+다음과 같은 클래스가 있고, racing 이라는 함수를 구현하려고 한다면!
+class Dog: Runable{ //...
+}
+
+class Horse: Runable{ //...
+}
+
+func racing(animals:[Runable]) -> Runable {
+}
+
+//프로토콜타입으로 사용가능하다.
+let winner:Runable = racing(animals: [Dog(),Horse()])// 프로토콜 Runable을 채택했다면 같은 타입의 인스턴스로 봐도 상관이 없다
+</pre>
 
 ## Delegate
+
+- 델리게이트는 **클래스나 구조체에서의 일부분의 할 일을 다른 인스턴스에게 대신 하게 하는 디자인 패턴**
+- **뷰가 받은 이벤트나 상태를 ViewController에게 전달해주기 위해 주로 사용**된다.(ex:UIScrollViewDelegate...)
+- ViewController를 통해 **View구성에 필요한 데이터를 받는 용도**로도 사용(~DataSource로 어미를 붙여 구현.)(ex:UITableViewDataSource)
+
+
+- selector 인스턴스를 통해 objc 메소드를 주고 받아 target의 액션을 수행하도록 하는 위임자의 역활을 받는다.
+- Data를 주고 받는다. 결국은 메소드를 주고 받는다는 것과 동일 하다.
+- notification, delegate 역시 인스턴스간에 메소드를 주고받아 데이터를 주고 받게 된다.
+
 
 - 대표적인 예제로 UIApplication 는 AppDelegate를 통해 App의 상태를 전달 받는다.
 - Delegate를 사용할려면 Protocol을 통해 구현을 해야한다.
@@ -176,18 +210,43 @@ class Animal: Runable{
 - 클래스, 구조체에서 할 일을 다른 인스턴스에게 대신 하라 라고 하는 패턴
 - example : 뷰가 해야 할일을 뷰컨이 대신 처리하게 끔 하는형식
 
+- 쫄따구는 델리게이트가 있음 실행이 되도록
+	- 어떠한 데이터나 액션이 필요한 시점에 이벤트가 발생하도록 해야 함. (메소드의 실행)
+- 대장은 델리게이트를 실행되도록 구현.(ex: ViewController)
+	- 쫄따구가 채택한 프로토콜의 메소드등을 구현해서 메소드가 실행되도록 함.
+
+- 델리게이트의 상하 관계는 시간 상의 상하 관계라고 이해해도 될듯.
+	- 먼저 구현되는 것이 예전에 구현된것을 쫄따구, 나중에 구현되는것이 대장.
+
 <pre>
+// Delegate 선언부
 class CustomView: UIView {
-	var delegate:CustomViewDelegate?
-	override func layoutSubviews() {
-	delegate?.viewFrameChanged(newFrame:self.frame)
+	var delegate:CustomViewDelegate?//받아옴...2 특징-1
+	override func layoutSubviews() {// 특정 시점이 되면, 해당 메소드가 호출됨....3
+		delegate?.viewFrameChanged(newFrame:self.frame)//부모의것을 호출함...4. 특징-3
 	}
 }
+
 protocol CustomViewDelegate {
+	func viewFrameChanged(newFrame:CGRect)// 특징-2
+}
+
+// Delegate 구현부
+class ViewController: UIViewController, CustomViewDelegate{
+	override func viewDidLoad(){
+		/**/
+		customview.delegate = self // viewcontroller의 인스턴스 주소를 넘겨줌... 1
+		/**/
+	}
+	
+	func viewFrameChanged(){
+	// 구현 할 부분.... 5번째 실행 부분.
+	}
 }
 </pre>
 	
-- 구현자 == 대리자
+
+- 델리게이트 선언부를 구현 == 대리자
 	- 테이블 뷰 에서 처럼 이전 구현자가 그 당시 결정 하지 못하거나 결정 할 필요 없는것들을 추상화 시켜놓는다는것.
 	- 이전에 구현한 놈이 나중에 구현할 놈에게 코딩을 대리시키는거임.
 	- 재사용성을 높이기위한 개념으로 OOP적 특성을 내포한다.
@@ -195,4 +254,91 @@ protocol CustomViewDelegate {
 	- 안의 내용의 크기가 유동적으로 변함에 따라 스택뷰의 사이즈가 커지기도함.
 	- 텍뷰, 레이블, 스택뷰 등이 내용물의 양에 따라 height가 정해지기때문에 사이즈가 결정된다.. 이말은 내용물의 height가 결국 담고있는 것의 height이기때문인듯...헌데 뷰는 안됨...
 
+<pre>
+//예를들어 키보드의 return 키를 눌렀을때 자판이 내려가는 textField를 구현 하고자 할 때 
+//textField의 UITextFieldDelegate 프로토콜을 VC가 채택했을 경우.
+//textFiedl안에는 아마 이런식일 거임.
+class textField: UIView {
+	var delegate: UITextFieldDelegate?
+	override func ~~메소드() {
+		delegate?. textFieldShouldReturn(textField:self.frame/*선언부의 self가 들어감을 주목 : VC에서 VC의 주소값을 받아오고 입력값으로 선언부의 인스턴스를 집어 넣으므로써 구현 됨 여부와 상관없이 서로 이어지는(?) 역활을 하게 된다.*/)
+	}
+}
+
+
+//===============VC===========================================
+	override viewDidLoad(){
+	//...........
+	}
+	
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+     // 구현부
+        textField.resignFirstResponder()// responder를 빼앗는다.
+        return true
+    }
+</pre>
+
+
+
+## UIScrollView
+
+- ViewSize 보다 확장된 뷰를 보기위한 View
+	- ContentsView : 전체 화면 
+	- ScrollView : 실질적으로 보이는 화면
+
+- lable 은 String, imageView는 image, ScrollView는 UIVIew를 보여주는 역활.
+	- ScrollView위에 무엇인가 표현 할려면 당연히 ScrollView 위에 subView 해줘야 겠져~?
+- isPagingEnable 속성은 페이지 단위로 보여줄지를 결정하는 속성.
+- 컨텐츠 뷰의 오프셋은 스크롤 뷰의 원점을 표시하게 된다. CGPoint 타입의 x, y값.
+	- 강제로 오프셋을 지정 할 수도 있고, 애니메이션 또한 넣을 수 있다.
+- scrollView는 컨텐츠 뷰의 사이즈가 이미 정해져 있는 상태에서 만들 수 있다.
+	- 유동적인 스크롤이 들어가야 될 경우에는 테이블 뷰가 적당하다.
+- 스크롤 뷰를 화면에서 터치해서 움직이려 할 경우 해당 이벤트는 VC가 받게 된다. 
+	- 스크롤 뷰 인스턴스가 갖고 있는 속성을 VC에서 컨트롤 하고 싶어? 그래서 델리게이트가 구현되어있어요~
+
+<pre>
+
+class ViewController: UIViewController, UIScrollViewDelegate {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let sc = UIScrollView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+        sc.contentSize = CGSize(width: view.frame.size.width, height: 1000)
+        sc.delegate = self// 델리게이트 여 있네~
+        
+        view.addSubview(sc)
+        
+        for num in 0..<20{
+            
+            let row = CGFloat(num%10)
+            let colum = CGFloat(num/10)
+            
+            let view = UIView(frame: CGRect(x: colum*100, y: row*100, width: 100, height: 100))
+            view.tag = num
+            view.backgroundColor = UIColor(red: CGFloat(colum)*0.1, green: CGFloat(row)*0.1, blue: CGFloat(num)*0.1, alpha: 1)
+            
+            sc.addSubview(view)
+        }
+        
+        
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetX: CGFloat = scrollView.contentOffset.x
+        let colorValue:CGFloat = 1 - (offsetX/(scrollView.contentSize.width - scrollView.frame.size.width))
+        
+       
+        print("current OffsetX : \(offsetX)")
+        print("current scrollView.contentSize.width : \(scrollView.contentSize.width)")
+        print("current scrollView.frame.size.width : \(scrollView.frame.size.width)")
+        print("current scrollView.bounds.origin.x : \(scrollView.bounds.origin.x)")
+        print("current ColorValue : \(colorValue)")
+        scrollView.backgroundColor = UIColor(red: 0, green: colorValue, blue: 0, alpha: 1)
+    }
+    
+
+}
+
+</pre>
 

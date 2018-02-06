@@ -54,13 +54,29 @@ open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?)
 - x,y, width, height 로 표현 가능. ( 사각형으로만 표현 가능)
 - 이 클래스를 상속받는 UI들이 대부분이기 때문에 지속적으로 봐놓는게 좋다.
 
+## UILable
+- String 인스턴스를 뿌려줌.
+
+## UIImageView 
+- UIImage 인스턴스를 화면에 뿌려줌.
+	- UIViewContentsMode : 화면에 어떻게 보여줄 것인가..
+	- 이미지 추가전에는 항상 프로젝트에 copy한 후에 build phase에 copy bundle resources에 가서 추가 해줘야 한다.
+
+	
+## UIButton 
+- UIComponent에 사용자 인터렉션에 의한 응답에 대해 특별한 액션을 줄수 있게 설정하는 클래스
+	- UIControl을 상속 받았음. (addTarget)
+	- 생성시 입력하는 타입은 버튼의 타입
+		- Sysyem, custom, contentsAdd등..
+
+
 ### note
 <pre>
 public init(frame: CGRect)// 좌표계 초기화
 open var tag: Int// Int자료형 UIView 인스턴스의 식별 프로퍼티
 open var layer: CALayer { get }// UI를 원으로 만들고자 할때
-open var frame: CGRect// 슈퍼 뷰
-open var bounds: CGRect// 주변 값
+open var frame: CGRect// 슈퍼 뷰 기준
+open var bounds: CGRect// 주변 값 기준
 open var isMultipleTouchEnabled: Bool// 다중 터치 가능여부
 open var clipsToBounds: Bool// 다중영역으로 자를떄, 현재 프레임 사이즈 밖의 것들을 잘라 표현할것인지 여부
 open var backgroundColor: UIColor?// 배경 값
@@ -72,4 +88,144 @@ open func insertSubview(_ view: UIView, at index: Int)// 자식뷰들은 상위�
 open func removeFromSuperview()
 open func layoutIfNeeded()//
 </pre>
+
+
+####tip!
+<pre>
+NS_AVAILABLE_IOS(version)// 지원 가능한 최고 버전, 이하 버전일 경우 crash
+// 오픈 소스를 사용할때 꼭 확인 하고 사용..
+</pre>
+
+#### UI 만들기를 할 때 반복문을 사용하여 코드를 간결하게 하기
+
+<pre>
+    /// UI인스턴스 만드는 메소드
+    // addsubview만 하고 추가적으로 frame은 정하지 않는다.
+    private func createUI()
+    {
+        //mainView에 추가되는 가장 큰 영역
+        displayView = UILabel()
+        // label
+        // 우측 정렬, 초기화 0, 텍스트 폰트, 텍스트 색상.
+        displayView.text = "0"
+        displayView.textAlignment = NSTextAlignment.right// 문자 우측 정렬.
+        displayView.font = UIFont.systemFont(ofSize: 100)
+        displayView.textColor = UIColor.white
+        view.addSubview(displayView)
+        
+        
+        keyPadView = UIView()
+        view.addSubview(keyPadView)
+        
+        //keyPad에 추가되는 영역
+        etcView = UIView()
+        keyPadView.addSubview(etcView)
+        operView = UIView()
+        keyPadView.addSubview(operView)
+        numberPadView = UIView()
+        keyPadView.addSubview(numberPadView)
+        
+        
+        //test를 위한 색상 지정
+        displayView.backgroundColor = .darkGray
+        keyPadView.backgroundColor = UIColor.black
+        //        etcView.backgroundColor = UIColor.red
+        //        operView.backgroundColor = UIColor.blue
+        //        numberPadView.backgroundColor = .yellow
+        
+        etcBtnList = makeBtn(count: 3)// -> [UIButton]
+        let etcTitleList = ["C","+/-","%"]
+        //속성이 비슷한 버튼을 반복문으로 처리
+        for index in 0 ..< etcBtnList.count
+        {
+            let title = etcTitleList[index]
+            let btn = etcBtnList[index]
+            btn.layer.borderWidth = 1//버튼의 테두리 선 굵기 , layer는 렌더링에 사용되는 view의 프로퍼티
+            btn.layer.borderColor = UIColor.darkGray.cgColor
+            btn.setTitle(title, for: .normal)// .setTitle은 버튼 텍스트. 특정 액션을 정함.
+            btn.addTarget(self, action: #selector(self.etcHandler(_:)), for: .touchUpInside)
+            etcView.addSubview(btn)
+        }
+        
+        operBtnList = makeBtn(count: 5)
+        let operTitleList = ["+","-","*","/","="]
+        for index in 0 ..< operBtnList.count
+        {
+            let title = operTitleList[index]
+            let btn = operBtnList[index]
+            btn.setTitle(title, for: .normal)
+            btn.layer.borderWidth = 1
+            btn.layer.borderColor = UIColor.darkGray.cgColor
+            btn.addTarget(self, action: #selector(self.oprationHandler(_:)), for: .touchUpInside)
+            operView.addSubview(btn)
+        }
+        numberBtnList = makeBtn(count: 10)
+        
+        let numberTitleList = ["7","8","9","4","5","6","1","2","3","0"]
+        for index in 0 ..< numberBtnList.count
+        {
+            let title = numberTitleList[index]
+            let btn = numberBtnList[index]
+            btn.setTitle(title, for: .normal)
+            btn.setTitleColor(.orange, for: .highlighted)
+            btn.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+            
+            btn.layer.borderWidth = 1
+            btn.layer.borderColor = UIColor.darkGray.cgColor
+            btn.addTarget(self, action: #selector(self.numberHandler(_:)), for: .touchUpInside)
+            btn.addTarget(self, action: #selector(self.numberDown(_:)), for: .touchDown)
+            numberPadView.addSubview(btn)
+        }
+        
+    }
+    //UI인스턴스 프레임 설정 메소드
+    private func updateLayout()
+    {
+        //버튼은 화면의 가로에 4개씩 배치할 것이기 때문에 전체 뷰/4
+        let btnWidth:CGFloat = self.view.frame.size.width / 4
+        //아래에서부터 배치
+        var offSetY:CGFloat = self.view.frame.size.height - (btnWidth * 5)
+        
+        //=======================================
+        //keyPad영역 프레임
+        keyPadView.frame = CGRect(x: 0, y: offSetY , width: view.frame.size.width, height: btnWidth*5)
+        //Display영역 프레임
+        let displayViewHeight:CGFloat = 150
+        offSetY -= displayViewHeight
+        displayView.frame = CGRect(x: 0, y: offSetY, width: view.frame.size.width, height: displayViewHeight)
+        //=======================================
+        //<keyPad안 영역>
+        
+        //etcView영역 프레임
+        etcView.frame = CGRect(x: 0, y: 0, width: btnWidth*3, height: btnWidth)// 3개 들어갈꺼니까..
+        arrange(viewList: etcBtnList, collumCount: 3, width: btnWidth)
+        //연산자영역 프레임
+        operView.frame = CGRect(x: btnWidth * 3, y: 0, width: btnWidth, height: btnWidth * 5)
+        arrange(viewList: operBtnList, collumCount: 1, width: btnWidth)
+        
+        //숫자영역 프레임
+        numberPadView.frame = CGRect(x: 0, y: btnWidth, width: btnWidth * 3, height: btnWidth * 4)
+        arrange(viewList: numberBtnList, collumCount: 3, width: btnWidth)
+        
+    }
+    
+    func arrange(viewList:[UIView], collumCount:Int, width:CGFloat)
+    {
+        for index in 0 ..< viewList.count
+        {
+            let col:CGFloat = CGFloat(index % collumCount)// 열은 지정된 갯수이상 행에 포함 안되도록.
+            let row:CGFloat = CGFloat(index / collumCount)// 행 넘기도록
+            
+            viewList[index].frame = CGRect(x:col*width, y: row*width, width: width, height: width)
+        }
+    }
+</pre>
+
+- 인스턴스 생성 하는 것과 프레임 결정하는것, 배치하는 것들을 하나의 메소드를 만들어 관리.
+- 중복되는 내용이 많은 것들은 반복문을 통해 간결하게...
+
+
+
+
+
 

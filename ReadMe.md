@@ -1,7 +1,9 @@
 # Swift 정복기.
+
+## Project_Practice
+- [BlackJack](https://github.com/joohopark/jhbob/tree/master/Project/smallProject)
  
 ## Step 0.
-
 
 - 기초 문법
 	- [변수, 상수](https://github.com/joohopark/jhbob/blob/master/Study/SwiftBasic_var_let.md)

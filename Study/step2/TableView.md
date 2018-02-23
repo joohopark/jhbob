@@ -1,8 +1,29 @@
 # UITableView
+
+![screen](/study/image/tableview.jpg)
+
 - UITableView : 데이터를 row들로 정렬하여 단일 column으로 보여줌.
 	- TableView는 단일 열에 항목들의 리스트를 표현한다.
 	- UITableView는 UIScrollView의 자식클래스로 스크롤 기능은 오직 수직 스크롤만 가능하다.
 	- TableView는 ViewController의 RootView(컨버스)위에 위치 하여 작동 하며, ViewDidLoad나 기타 View를 구성하는 lifeCycle위의 함수에서 구현에 사용하기 위해 Protocol(DataSource, Delegate)를 사용한다.
+	- DataSource : 프로토콜을 사용하여 테이블뷰에서 보여줄 데이터를 관리할 대리인의 역할을 정의해 둔것, 여기서 대리인은 ViewController
+	- Delegate : 프로토콜을 사용하여 테이블뷰의 대리자로써 수행 할 수 있는 역활을 정의해 둔것으로 여기서 대리인은 역시 ViewController
+
+
+## TableView의 Reusable Queue
+
+- 테이블의 테이블 Cell이(row가) 약 100만개라고 할때 이 Cell들을 한번에 다 생성해 놓고 사용자의 interaction을 기다린다면 어떻까?<br>
+ 사용자는 모든 UI가 로드되는걸 기다리다 지칠 것이다.<br>
+ UITableView는 이것을 지양하기 위해서 ReusableQueue(재사용 큐)를 사용한다.<br>
+ 사용자가 화면을 움직여 TableView의 Cell이 화면에서 사라지고 나타날때 이 Cell들은 재사용큐에 Enqueue, Dequeue된당.
+ ViewController안에서 cellForRowat을 통해 cell을 생성할때, 재사용큐에 현재 들어가있는 Cell이 있는지 확인하고 있다면 dequeue를 통해 이를 재사용한다. 
+
+> 위개념은 정말 중요한 개념이다.. 이것 때문에 CellForRowAt에 UI를 생성해서 사용하여 Cell에 올리거나 해서는 안된다...! 
+> 
+> 만약 Cell에 뭔가를 추가하거나(UI) 변경하고 싶다면 Custom Cell을 만들어 사용해야함..
+> 
+> 특정 셀을 지정해야된다..? 그럼 Cell에 Key값을 지정해줘야 줘!
+
 
 - accessory views
 	- Cell은 제목, 이미지들을 갖을 수 있고 오른쪽 가장자리 근처에 엑세서리 뷰들이 있다.( disclosure indicators, detail disclosure)
@@ -27,6 +48,9 @@ extension IndexPath {
 	- 음악을 가져와 리스트로 만들어준다던가.. 사진등을 받아와 구성한다던가..
 
 ## Plain Table View
+
+![screen](/study/image/plainTableView.jpg)
+
 - 기본적인 Table View
 - 여러개의 Section을 가질수 있다.
 	- aka 연락처의 ㄱㄴㄷㄹㅁㅂㅅ
@@ -35,6 +59,8 @@ extension IndexPath {
 - 각각의 Section에는 Section을 표시하는 header, Footer title을 사용할 수 있다.
 
 ## Grouped Table View
+
+![screen](/study/image/groupTableView.jpg)
 
 - 각 Section을 Group의 형태로 나타내는 테이블 뷰
 - 데이터의 디테일한 정보를 표현할 떄 많이 사용된다.

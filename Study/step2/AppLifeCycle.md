@@ -1,15 +1,36 @@
-# Application Life Cycle / UITextField / Protocol / Delegate / UIScrollView
+# MVC ,
+# Application Life Cycle , 
+# UITextField ,
+# Protocol , 
+# Delegate ,
+# UIScrollView
+
+## MVC?
+
+<p align="center">
+
+![screen](/study/image/MVC.jpg)
+
+</p>
+
+
+<pre>
+IOS를 개발하는데 실제로 굉장히 다양한 architectural 패턴들이 존재한다.
+(MVC, MVP, MVC-N, MVVM, VIPER...) 
+그러나 이 모든 architectural 패턴들은 
+`프로그램의 유지보수를 쉽게 그리고 단위 테스트를 할 수 있게` 
+라는 공통된 목표를 갖기 때문에 손에 맞고, 해당 프로젝트를 진행 함에 있어 맞겠다 싶은것을 써야함.
+(0 순위는 손에 맞고, 가장 현명하게 코드를 짤수 있는 패턴이어야 겠지여...)
+</pre>
 
 ## The Structure of an App
 
-- IOS는 MVC 패턴을 통해 App을 구성한다.
-	- Model : DataModel
-	- Controller : Model과 View를 이어주는 컨트롤
-		- UIApplication 인스턴스를 생성하며, 이 인스턴스는 Event Loop를 관리.
-		- UIApplication 은 Application Delegate와 ViewContoller를 통해 이벤트를 처리
-		- 화면 터치 발생 -> 하드웨어(화면)이 인식 -> IOS로 전달 -(특정 App에게 Port를 통해 전달. Event Queue에 전달.)> UIApplication으로 전달.
-		- UIApplication : 각 Event, 현재 App의 상태등..
-	- View : Controller가 처리할 주체를 정해주면 결과를 전달받은 후 화면에 결과를 보여줌.
+<p align="center">
+
+![screen](/study/image/AppStructure.jpg)
+
+</p>
+
 
 <pre>
 #import <UIKit/UIKit.h>
@@ -23,7 +44,23 @@ int main(int argc, char * argv[])
 }//ViewController인스턴스 생성전에 위의 메인 코드를 통해 UIApplicationMain인스턴스가 생성된다.
 </pre>
 
+- IOS는 MVC 패턴을 통해 App을 구성한다.
+	- Model : DataModel
+	- Controller : Model과 View를 이어주는 컨트롤
+		- UIApplication 인스턴스를 생성하며, 이 인스턴스는 Event Loop를 관리.
+		- UIApplication 은 Application Delegate와 ViewContoller를 통해 이벤트를 처리
+		- 화면 터치 발생 -> 하드웨어(화면)이 인식 -> IOS로 전달 -(특정 App에게 Port를 통해 전달. Event Queue에 전달.)> UIApplication으로 전달.
+		- UIApplication : 각 Event, 현재 App의 상태등..
+	- View : Controller가 처리할 주체를 정해주면 결과를 전달받은 후 화면에 결과를 보여줌.
+
 ## Excution States for App
+
+<p align="center">
+
+![screen](/study/image/excu_App.jpg)
+
+</p>
+
 
 - App에는 각 상황마다의 상태가 존재.
 
@@ -36,11 +73,16 @@ int main(int argc, char * argv[])
 
 ## Call to the methods of your app delegate object
 
+
 - 대부분의 상태변화를 AppDelegate 객체에 호출되는 메소드를 오버라이드하여 알아챌 수 있다.
 	- 개발자는 해당 Class파일에 Override해서 Application의 상태를 조절 하도록 사용이 가능.
 	- App의 상태를 관리하는 Delegate 클래스임.
 	- UIViewControllerMain 인스턴스의 Delegate.
 	- AppDelegate -> mainUI 로드 -> didFinishLaunchingWithOptions -> 
+
+---
+
+### App의 생명 주기 메소드..
 
 - application:willFinishLaunchingWithOptions:
 	- 어플리케이션이 최초 실행될 때 호출되는 메소드
@@ -78,6 +120,7 @@ applicationDidEnterBackground : App이 백그라운드 들어가기전.
 
 ##Step of After Launch
 
+
 - Launch Time
 	- 사용자의 터치 (AppIcon)
 	- main 함수 호출 됨.
@@ -93,11 +136,6 @@ applicationDidEnterBackground : App이 백그라운드 들어가기전.
 - Running
 	- Activate App : applicationDidBecomeActive 시점.
 	- Event Loop
-
-
-
-
-
 
 
 #### Note
@@ -118,7 +156,7 @@ StoryBoard는 StoryBoard Reference를 통해 이동이 가능하다( 한 프로�
 
 ## UITextField 
 
-- 
+- App에서 사용자의 입력을 String의 형태로 받아 Data로 사용할 수 있게 하는 UI
 
 
 #### Note
@@ -341,4 +379,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 }
 
 </pre>
+
+
+### Reference
+- [https://medium.com/ios-development-with-swift/mvc-패턴-in-ios-7751911f8ca8](https://medium.com/ios-development-with-swift/mvc-패턴-in-ios-7751911f8ca8)
 

@@ -1,21 +1,44 @@
-# Container View Controller : Navigation ViewController, Navigation Bar ( Item)/ UserDefault
+# Container View Controller : 
+# Navigation ViewController,
+# Navigation Bar ( Item)
+# UserDefault
+---
+---
+
+## Container View Controller
 
 - View Controller의 Container역할을 하는 View Controller
 - View Controller 간의 구조를 잡는 역할을 한다.
 - 일반적으로 Root View를 가지고 있지 않고,View Controller를 Sub View Controller로 가지고 있다.
 
+---
 ### 종류
 
-1. UINavigationController
-2. UITabbarController 
-3. UISplitViewController
+|General View Controller(컨텐츠들)  | Container View Controller(컨텐츠들을 관리하기 위해서)|
+| :--: | :--: |
+| UIViewController | UINavigationController |
+|	UITableViewController |	 UITabbarController |
+| UICollectionViewController | 	UISpliViewcontroller |
 
+
+- UINavigationController : 가장 많이 쓰인다. 
+- UITabbarController : deapth 가 같거나, View의 성격이 완전이 다른 경우에 사용
+	- 대게 커스텀해서 사용하는데, 커스텀하기가 생각보다 까다롭...
+- UISplitViewController : child View를 사용하여 구현한다.
+
+---
 ## NavigationController
+
+![screen](/study/image/navigaionControllerExam.jpg)
+
 
 - UINavigationController class
 - Navigation Controllers Manage Stacks of Other View Controllers
 	- 다른 뷰 컨트롤러들의 스택을 관리한다.
 
+![screen](/study/image/navigation_stack.jpg)
+
+- `NavigationController`는 `stack` 방식으로 동작하기 때문에 자료를 Pop 이나 Push 를 한다. 근데 이게 StackFrema에 남아 있는게 아니라, pop 될때 사라진다. 
 
 - UINavigation Controller 
 	- viewControllers
@@ -63,15 +86,21 @@
 
 
 ## Navigation Bar
+
+![screen](navigationBar.jpg)
+
 - Navigation Bar Item으로 접근이 가능
 - 네비게이션 인터페이스를 관리 하는 뷰
 - navigation bar의 외관은 customize할수 있다. 하지만 frame, bounds, or alpha values는 절대 직접 바꿀수 없다
+
+![screen](navigationBar2.jpg)
 
 - Left Bar, Center, Right Bar
 	- Left Bar에는 기본으로 <Back이 생김. 기능은 pop, backBarButtonItem이 기본형이라는 이야기임.
 	- 커스텀을 통해 변경 가능
 		- 커스텀을 통해 변경할때 오토레이아웃이 아닌 프레임 베이스로는 변경이 불가능하다.
 		- 네비게이션 바 안에서는 자동적으로 오토레이아웃이 적용되기 때문에(IOS 11) 제약 조건을 정해 주는것으로만 크기 조절을 할 수 있다.(x,y 좌표는 의미가 없다.)
+
 
 <pre>
 // 예제...

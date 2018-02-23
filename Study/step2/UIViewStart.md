@@ -2,12 +2,45 @@
 
 ## 단위.
 
+<p align="center">
+
+![screen](/study/image/pixel.png) 
+
+</p>
+
 - Pixel : 실제 이미지 사이즈
 - Point : 화면에 표시되는 이미지 사이즈
 
-레티나 이후부터 pixel을 잘게 더 쪼개어 표현 해주기때문에 단위를 point로 가져감..
+> Pixel 과 Point의 차이는, Pixel 의 이미지를 큰 Point 로 나누어서, 이미지를 넣음.
+> 레티나 이후부터 pixel을 잘게 더 쪼개어 표현 해주기때문에 단위를 point로 가져감..
+
+## UI Class Hierarchy
+
+![screen](/study/image/UIClassHierarchy.png)
+
+- App에서 사용자의 눈에 보이는 UI들은 하나의 Type, 즉 Class임.
+- 뿌리가 되는, 즉 상속 계층의 최상위 부모의 기능은 엥간치 알아야 자식 계층을 사용함에 있어 편리 할것임...
+	- UIView라든가 UIControll, UIResponder등..
+- import UIKit 을 사용한다.
+
+---
+
+## Quick Help(short cut key)
+
+Command + Shift + O(영문 'O') -> 검색 <br>
+Command + Shift + 0(숫자 0) -> 프로젝트 익스플로러? 를 숨기거나 꺼낼때..
+Command + 1,2,3,4,5,6 -> 프로젝트 익스플로러의 카테고리 변경..
+
+---
+
 
 ## Frame Base
+
+<p align="center">
+
+![screen](/study/image/FrameBase.jpg) 
+
+</p>
 
 - frame Base, 좌표계 : View 기준 좌측 상단 (0,0)
 	- View의 위치를 표현 할때는 상위 view를 기준으로 표현.(기준은 프레임 기준으로 좌표를 인식)
@@ -64,6 +97,12 @@ open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?)
 
 	
 ## UIButton 
+<p align="center">
+
+![screen](/study/image/uibutton.jpg) 
+
+</p>
+
 - UIComponent에 사용자 인터렉션에 의한 응답에 대해 특별한 액션을 줄수 있게 설정하는 클래스
 	- UIControl을 상속 받았음. (addTarget)
 	- 생성시 입력하는 타입은 버튼의 타입

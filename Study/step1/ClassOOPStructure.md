@@ -1,4 +1,44 @@
-# Classes & Structures
+# Classes & Structures,
+# init(),
+# ValueType VS ReferenceType,
+# OOP
+---
+---
+
+#### - 개념 <br>
+
+OOP(Object-Oriented Programming)는 프로그래밍을 조금더 실제 세상에 가깝게, 구현하기 위한 고민에서 출발한다. 
+
+![screen](/study/image/OOP.jpg)
+
+- 내가 알고있는 OOP의 개념을 적당한 뇌피셜과 지금까지의 이론 정리로써 다시 해석합니다.
+
+#### 1. 추상화(Abstraction) <br>
+
+ 사람을 코드로 구성한다 치면, 얼굴- 몸통- 사지 등으로 나누는 사람들도 있을 것이고, 이름, 나이, 성별 등으로 구성 하는 사람들이 있을 것이다.
+ 구현 하는 사람마다 차이는 있겠지만 생각의 출발은 하나다. 사물의 특징을 추출하고 이를 통해 코드로써 해당 사물을 구현 하는 것이다. 이것을 모델링한다고 하고 이런 모델링을 해 나가는 과정 자체를 추상화라고 한다.
+
+#### 2. 캡슐화(Encapsulation) & 3. 은닉화(information hiding) <br> 
+
+ 프로퍼티와 메서드들을 클래스라는 하나의 코드 블록으로 묶는것(Swift에서는 Structure또한 메서드를 갖기 떄문에 Structure도 포함된다라고 볼수 있을것 같다),
+ 접근 제한자(Aceess Controll)을 통해 정보 은닉을 포함한다. 캡슐화의 목적은 class 라는 **type** 속에 있는 것들(변수, 함수) 들의 외부에서 접근해서 값을 변경하는것을 보호하기 위해서이다.
+
+#### 4. 상속성(Inheritance) <br>
+
+ Class는 Super Class와 Sub Class, 혹은 부모 Class, 자식 Class등으로 나눠 상속이라는 개념을 수용해서 객체 지향적인 프로그래밍을 지향 한다.
+ 말은 복잡하지만 결론적으로는 부모의 프로퍼티, 메서드 등을 상속받은 자식은 부모의 프로퍼티, 메서드등을 사용함과 동시에 자신의 프로퍼티, 메서드등을 사용 할 수 있게 된다.
+ 더 줄이자면 **코드의 재활용성을 높였다.** 이다.
+
+#### 5. 다형성(Polymorphism) <br>
+
+ 영어단어가 참 어렵지만, 다형성은 두가지 특성으로 정리 할 수 있다.
+ <pre>
+OOP 다형성.
+overriding  -  상속 받은 후에 그 함수를 재 정의 하는 것.
+overloading - 같은 클래스내에서 함수등을 중복되게 만들고 다른용도로 쓰기위해 중복 정의 하는 것.
+</pre>
+ 개발자의 편의성을 위해? 혹은 코드의 재활용성을 높이기 위한 특성으로 봐도 될것 같다.
+
 
 ## class와 Structure의 공통점.
 
@@ -59,6 +99,8 @@ init(pro1: String, pro2: Int){
 # 값 VS 참조 
 
 ## 논리적 메모리 구조
+
+![screen](/study/image/Logical_memory.jpg)
 
 - Stack : 지역변수, 매개 변수 영역, 인스턴스 주소
 - Heap : 동적 할당 위한 영역, 인스턴스
@@ -189,11 +231,7 @@ class 자식: 부모, 프로토콜...{
 	- 상속시에 무조건적으로 구현해야함.
 	- override 불가.( 재정의)
 
-<pre>
-OOP 다형성.
-overriding  -  상속 받은 후에 그 함수를 재 정의 하는 것.
-overloading - 같은 클래스내에서 함수등을 중복되게 만들고 다른용도로 쓰기위해 중복 정의 하는 것.
-</pre>
+
 
 
 - init optional ( = init?())

@@ -1,8 +1,21 @@
-# ViewController 특징 / VeiwController간 화면 전환(코드/ 인터페이스 빌더) / UIAlertController
+# ViewController 특징 ,
+# VeiwController간 화면 전환(코드/ 인터페이스 빌더) ,
+# UIAlertController
+---
+---
 
 ## ViewControlelr
+
+
+<p align="center">
+
+![screen](/study/image/RootView.jpg) 
+
+</p>
+
 - 앱의 기초가 되는 내부 구조
 - 모든 앱은 적어도 한개 이상은 ViewController를 갖고 있으며 대부분 앱은 여러 ViewController로 이뤄져있다.
+	- 그리고 그한개 이상의 ViewController는 UI들을 올릴수 잇는 Root View 가 존재한다.
 - ViewController는 화면에 보이는 scene을 관리하는 역활을 하며 화면 자체를 뜻하는것은 아님.
 	- window 는 하나이상을 뷰컨트롤러를 필요로 한다.
 	- 화면전환 : 뷰들이 스택의 형태로 push 된다.
@@ -15,18 +28,29 @@
 - C가 외부와 연결 되어있어야 MVC패턴에 바람직하다. (각 뷰끼리 통신? 모델끼리 통신? 바람직 하지 않다..하지만 언어팩의 데이터를 받아오고자 할떄? 언어팩은 앱에 단 하나만 존재해도 상관이 없는 경우.)
 - View에 이벤트가 발생 -> Controller는 델리게이트를 통해 해당 이벤트를 처리.
 
+---
 ### Container
+
 - 한 화면에 하나의 ViewControlelr를 갖는다고 봐도 상관없다, 하지만 아이패드의 경우에는 ViewController를 두개를 사용하여 하나의 ViewController가 또 다른 ViewController를 컨트롤 하여 하나의 화면을 구성 할 수 있다.
 	- Slack의 화면 구성 맹키로..SplitViewController
 	- Child UIViewController : 하나의 뷰컨트롤러가 또다른 하나의 뷰컨트롤러의 container를 갖을수 있도록 하는것.
 
-
+---
 ### UserInteraction
-- **UIViewController는 UIResponder를 상속받은 클래스**로 이벤트 체인으로부터 오는 이벤트는 효과적으로 처리한다.
+- **UIViewController는 UIResponder를 상속받은 클래스**로, 이벤트 체인으로부터 오는 이벤트는 효과적으로 처리한다.
 - **즉 사용자의 모든 이벤트는 ViewController가 받아서 각 View에 해당되는 Method와 Delegate로 처리**한다.
 	- 따라서 UIResponder를 상속 받지 않으면 사용자의 이벤트를 처리 할 수 없다. (UIImageView)
 
+---
 ### Data Marshaling
+
+<p align="center">
+
+![screen](/study/image/dataMarchal.jpg) 
+
+</p>
+
+
 - ViewController는 자신이 관리하는 View들과 앱 내부의 데이터와의 중계자 역할을 한다.
 	- 직접 모델과 뷰간의 데이터를 주고 받는건 옳지 않다.
 - 결국엔 ViewController는 MVC에서 V와 C의 역활을 다 하는 애매한 녀석이다..
@@ -36,6 +60,7 @@
 - 메모리가 부족시 didReceiveMemoryWarning() 메소드가 자동 으로 불리며, 오래동안 사용하지 않은 객체와 다시 쉽게 만들수 있는 객체를 제거할수 있어 메모리를 효율적으로 관리한다.
 	- 메모리에 문제가 있을때 화면에 문제가 있을때 해당 이벤트는 이 메소드에서 처리가 가능.
 	- viewdidload는 화면에 뿌릴 인스턴스를 생성해야 할때 불림.
+- 그래서 ViewController가 TableView의 DataSource를 .....
 
 ## ViewController 종류
 
@@ -59,6 +84,12 @@
 	4. .....etc....
 
 ## UIViewController 생명 주기
+
+<p align="center">
+
+![screen](/study/image/viewLifeCycle.jpg) 
+
+</p>
 
 - 프로그래머가 직접 호출 불가
 - 필요하다면 오버라이드 해야 하는 메소드이므로 꼭 해당 메소드 내에서 **super.메소드** 을 통해 기존 메소드를 꼭 호출해야 된다
@@ -107,6 +138,20 @@ let initVC: InitViewController = InitViewController()//xib파일이 없고 따�
 self.present(initVC, animated: true, completion: nil)
 </pre>
 
+
+<p align="center">
+
+![screen](/study/image/seguePresent.jpg) 
+
+</p>
+
+
+<p align="center">
+
+![screen](/study/image/seguePresent2.jpg) 
+
+</p>
+
 - 인터페이스 빌더에서 세그에를 사용.
 	- control키 를 통해서 modally를 설정.
 
@@ -115,6 +160,13 @@ self.present(initVC, animated: true, completion: nil)
 	- 아래에서 위로 올라오는 에니메이션이 기본.(enum으로 만들어진 transition을 통해 설정)
 		- ViewController.modalTransitionStyle 프로퍼티에 enum case를 넣어 설정.
 	- dismiss로 다시 전환을 해야지 딴방법으로는 사용해선 안됨.
+
+
+<p align="center">
+
+![screen](/study/image/unwindSegue.jpg) 
+
+</p>
 
 - segue(<=> unwind segue)
 	- 세그에 또한 하나의 객체. 
@@ -128,23 +180,24 @@ self.present(initVC, animated: true, completion: nil)
 
 
 
-- Navigation Controller
-	- Navigation Root View를 통해 시작.
-	- NC<->NC간의 화면 전환을 맡는다.
-	- Navigation View와 <-> VC 간에 전환을 진행 한다면 네비게이션 의 하위 뷰들과는 연관이 없다.
-
 
 ### Modifying a Segue’s Behavior at Runtime
+
+<p align="center">
+
+![screen](/study/image/excuteSegue.jpg) 
+
+</p>
+
 - 화면 전환 시작
 - 세그에 식별자 확인(shoudperformsegue 메소드) -> Bool
 	- override해서 식별자를 통한 조건을 정해줌.
 - 세그에 인스턴스 생성
 - 세그에 준비(prepareforsegue, prepare메소드)
 	- override해서 세그에 전에 데이터를 넘겨주려 할때, 전에 뭔가 수행 해야 할때 사용.
+		- prepareForSegue: 세그전에 Bool을 통해 세그를 진행 할것인지 말것인지를 결정.
+		- prepare : 세그가 진행된다면 세그가 됨에 있어 정보를 넘겨주거나 해야 할경우 이 메소드에 넣어 넘겨준다. 
 - 새로운 화면 전환
-
-
-
 
 ####tip
 <pre>
@@ -203,5 +256,17 @@ if let test = down.testing as! donwCasting{
     }
 </pre>
 
+#### - 결과
 
 
+<p align="center">
+
+![screen](/study/image/alert.jpg) 
+
+</p>
+
+<p align="center">
+
+![screen](/study/image/actionsheet.jpg) 
+
+</p>

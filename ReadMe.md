@@ -12,9 +12,13 @@
 >  mail로 noti주시면 감사하겠습니다 (꾸벅)
 
 ## TDD, (Test Driven Development)
+>- Without QA! 이 테스트는 내가 집도하도록 하지..
+
 - [TDD, Test Driven Development](https://github.com/joohopark/jhbob/blob/master/Study/TDD/TDD_UsingXcode.md)
 
 ## Project_Practice
+>- 혼자해보는 Swift4
+
 > - [FrameBase, UserDefault를 이용한 BlackJack miniGame](https://github.com/joohopark/jhbob/tree/master/Project/smallProject)
  
 ## Step 0.
@@ -45,6 +49,8 @@
 - [UITableView](https://github.com/joohopark/jhbob/blob/master/Study/step2/TableView.md)
 
 ## extension
+>- Swift4가 아니더라도 할수 있지만, 쓸모있는 IOS Developer가 되기위해..!
+
 - Sketch
 
 - Algorithm

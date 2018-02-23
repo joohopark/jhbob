@@ -9,7 +9,7 @@
 
 <p align="center">
 
-![screen](/study/image/MVC.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/MVC.jpg)
 
 </p>
 

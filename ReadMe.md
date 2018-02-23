@@ -47,6 +47,10 @@
 - [UIViewController, 화면 전환, UIAlertController](https://github.com/joohopark/jhbob/blob/master/Study/step2/ViewController_Segue_alert.md)
 - [Container ViewController(NavigationControlelr), UserDefault](https://github.com/joohopark/jhbob/blob/master/Study/step2/NavigationController_userDefault.md)
 - [UITableView](https://github.com/joohopark/jhbob/blob/master/Study/step2/TableView.md)
+- [AutoLayoout](https://github.com/joohopark/jhbob/blob/master/Study/step2/About_AutoLayout.md)
+- [NotificationCenter]()
+
+
 
 ## extension
 >- Swift4가 아니더라도 할수 있지만, 쓸모있는 IOS Developer가 되기위해..!

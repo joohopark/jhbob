@@ -21,28 +21,28 @@
 
 >- 기본적인 Swift 문법들을 정리
 
-- [Swift 변수& 상수, 자료형, 산술 & 비교 & 논리 연산자, 타입 추론, Condition Syntax](SwiftBasic_var_let_if_switch.md)
-- [Iterator Syntax, 삼항/논리/범위 연산자, Function]()
-- [Array, Set, Dictionary, Collection Type]()
+- [Swift 변수& 상수, 자료형, 산술 & 비교 & 논리 연산자, 타입 추론, Condition Syntax](https://github.com/joohopark/jhbob/blob/master/Study/step0/SwiftBasic_var_let_if_switch.md)
+- [Iterator Syntax, 삼항/논리/범위 연산자, Function](https://github.com/joohopark/jhbob/blob/master/Study/step0/SwiftBasic_for_while.md)
+- [Array, Set, Dictionary, Collection Type](https://github.com/joohopark/jhbob/blob/master/Study/step0/SwiftBasic_CollectionType.md)
 
 
 ## Step 1.
 
 >- OOP, Property, Property Observer등 Swfit의 특색있는 문법 및 디자인 패턴들을 정리
 
-- [Class& Structure, init(), ValueType VS Reference Type, OOP]()
-- [Tuple, Any, nil, Type Casting, Access Controll, Optional & Optional Binding]()
-- [Property, Property observer]()
+- [Class& Structure, init(), ValueType VS Reference Type, OOP](https://github.com/joohopark/jhbob/blob/master/Study/step1/ClassOOPStructure.md)
+- [Tuple, Any, nil, Type Casting, Access Controll, Optional & Optional Binding](https://github.com/joohopark/jhbob/blob/master/Study/step1/Optional.md)
+- [Property, Property observer](https://github.com/joohopark/jhbob/blob/master/Study/step1/Property_Observer.md)
 
 ## Step 2.
 
 >- AppLifeCycle, UI등을 정리
 
-- [MVC, ApplifeCycle, UITextField, Protocol, Delegate, UIScrollView]()
-- [UIBasic, UIView]()
-- [UIViewController, 화면 전환, UIAlertController]()
-- [Container ViewController(NavigationControlelr), UserDefault]()
-- [UITableView]()
+- [MVC, ApplifeCycle, UITextField, Protocol, Delegate, UIScrollView](https://github.com/joohopark/jhbob/blob/master/Study/step2/AppLifeCycle.md)
+- [UIBasic, UIView](https://github.com/joohopark/jhbob/blob/master/Study/step2/UIViewStart.md)
+- [UIViewController, 화면 전환, UIAlertController](https://github.com/joohopark/jhbob/blob/master/Study/step2/ViewController_Segue_alert.md)
+- [Container ViewController(NavigationControlelr), UserDefault](https://github.com/joohopark/jhbob/blob/master/Study/step2/NavigationController_userDefault.md)
+- [UITableView](https://github.com/joohopark/jhbob/blob/master/Study/step2/TableView.md)
 
 ## extension
 - Sketch

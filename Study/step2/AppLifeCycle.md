@@ -27,7 +27,7 @@ IOS를 개발하는데 실제로 굉장히 다양한 architectural 패턴들이 
 
 <p align="center">
 
-![screen](/study/image/AppStructure.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/AppStructure.jpg)
 
 </p>
 
@@ -57,7 +57,7 @@ int main(int argc, char * argv[])
 
 <p align="center">
 
-![screen](/study/image/excu_App.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/excu_App.jpg)
 
 </p>
 

@@ -29,14 +29,14 @@
 ---
 ## NavigationController
 
-![screen](/study/image/navigaionControllerExam.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/navigaionControllerExam.jpg)
 
 
 - UINavigationController class
 - Navigation Controllers Manage Stacks of Other View Controllers
 	- 다른 뷰 컨트롤러들의 스택을 관리한다.
 
-![screen](/study/image/navigation_stack.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/navigation_stack.jpg)
 
 - `NavigationController`는 `stack` 방식으로 동작하기 때문에 자료를 Pop 이나 Push 를 한다. 근데 이게 StackFrema에 남아 있는게 아니라, pop 될때 사라진다. 
 
@@ -87,13 +87,13 @@
 
 ## Navigation Bar
 
-![screen](navigationBar.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/navigationBar.jpg)
 
 - Navigation Bar Item으로 접근이 가능
 - 네비게이션 인터페이스를 관리 하는 뷰
 - navigation bar의 외관은 customize할수 있다. 하지만 frame, bounds, or alpha values는 절대 직접 바꿀수 없다
 
-![screen](navigationBar2.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/navigationBar2.jpg)
 
 - Left Bar, Center, Right Bar
 	- Left Bar에는 기본으로 <Back이 생김. 기능은 pop, backBarButtonItem이 기본형이라는 이야기임.

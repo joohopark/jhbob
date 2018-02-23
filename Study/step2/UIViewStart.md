@@ -4,7 +4,7 @@
 
 <p align="center">
 
-![screen](/study/image/pixel.png) 
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/pixel.png) 
 
 </p>
 
@@ -16,7 +16,7 @@
 
 ## UI Class Hierarchy
 
-![screen](/study/image/UIClassHierarchy.png)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/UIClassHierarchy.png)
 
 - App에서 사용자의 눈에 보이는 UI들은 하나의 Type, 즉 Class임.
 - 뿌리가 되는, 즉 상속 계층의 최상위 부모의 기능은 엥간치 알아야 자식 계층을 사용함에 있어 편리 할것임...
@@ -38,7 +38,7 @@ Command + 1,2,3,4,5,6 -> 프로젝트 익스플로러의 카테고리 변경..
 
 <p align="center">
 
-![screen](/study/image/FrameBase.jpg) 
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/FrameBase.jpg) 
 
 </p>
 
@@ -99,7 +99,7 @@ open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?)
 ## UIButton 
 <p align="center">
 
-![screen](/study/image/uibutton.jpg) 
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/uibutton.jpg) 
 
 </p>
 

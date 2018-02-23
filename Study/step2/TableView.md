@@ -1,6 +1,6 @@
 # UITableView
 
-![screen](/study/image/tableview.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/tableview.jpg)
 
 - UITableView : 데이터를 row들로 정렬하여 단일 column으로 보여줌.
 	- TableView는 단일 열에 항목들의 리스트를 표현한다.
@@ -49,7 +49,7 @@ extension IndexPath {
 
 ## Plain Table View
 
-![screen](/study/image/plainTableView.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/plainTableView.jpg)
 
 - 기본적인 Table View
 - 여러개의 Section을 가질수 있다.
@@ -60,7 +60,7 @@ extension IndexPath {
 
 ## Grouped Table View
 
-![screen](/study/image/groupTableView.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/groupTableView.jpg)
 
 - 각 Section을 Group의 형태로 나타내는 테이블 뷰
 - 데이터의 디테일한 정보를 표현할 떄 많이 사용된다.

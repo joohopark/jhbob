@@ -9,7 +9,7 @@
 
 <p align="center">
 
-![screen](/study/image/RootView.jpg) 
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/RootView.jpg) 
 
 </p>
 
@@ -46,7 +46,7 @@
 
 <p align="center">
 
-![screen](/study/image/dataMarchal.jpg) 
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/dataMarchal.jpg) 
 
 </p>
 
@@ -87,7 +87,7 @@
 
 <p align="center">
 
-![screen](/study/image/viewLifeCycle.jpg) 
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/viewLifeCycle.jpg) 
 
 </p>
 
@@ -141,14 +141,14 @@ self.present(initVC, animated: true, completion: nil)
 
 <p align="center">
 
-![screen](/study/image/seguePresent.jpg) 
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/seguePresent.jpg) 
 
 </p>
 
 
 <p align="center">
 
-![screen](/study/image/seguePresent2.jpg) 
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/seguePresent2.jpg) 
 
 </p>
 
@@ -164,7 +164,7 @@ self.present(initVC, animated: true, completion: nil)
 
 <p align="center">
 
-![screen](/study/image/unwindSegue.jpg) 
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/unwindSegue.jpg) 
 
 </p>
 
@@ -185,7 +185,7 @@ self.present(initVC, animated: true, completion: nil)
 
 <p align="center">
 
-![screen](/study/image/excuteSegue.jpg) 
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/excuteSegue.jpg) 
 
 </p>
 
@@ -261,12 +261,12 @@ if let test = down.testing as! donwCasting{
 
 <p align="center">
 
-![screen](/study/image/alert.jpg) 
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/alert.jpg) 
 
 </p>
 
 <p align="center">
 
-![screen](/study/image/actionsheet.jpg) 
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/actionsheet.jpg) 
 
 </p>

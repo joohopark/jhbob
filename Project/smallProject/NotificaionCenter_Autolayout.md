@@ -5,7 +5,7 @@
 ##18.02.24
 --
 
-![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/noti_practioce.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/noti_practioce.jpg)
 
 - **화면 구성**
 	- Main Navigation Controller

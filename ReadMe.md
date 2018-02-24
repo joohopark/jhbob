@@ -18,8 +18,10 @@
 
 ## Project_Practice
 >- 혼자해보는 Swift4
+> Step0~, 에서 만들어본 자그마한 예제 코드들..
 
-> - [FrameBase, UserDefault를 이용한 BlackJack miniGame](https://github.com/joohopark/jhbob/tree/master/Project/smallProject)
+- [FrameBase, UserDefault를 이용한 BlackJack miniGame](https://github.com/joohopark/jhbob/blob/master/Project/smallProject/BlackJack.md)
+- [NotifiocationCenter, Autolayout(Using StroyBoard)를 이용한 Signing Up, DetailMemberView 페이지]() 
  
 ## Step 0.
 

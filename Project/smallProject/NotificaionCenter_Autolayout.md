@@ -5,6 +5,11 @@
 ##18.02.24
 --
 
+- [Code 보기](https://github.com/joohopark/jhbob/tree/master/Project/smallProject)
+
+---
+
+
 ![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/noti_practioce.jpg)
 
 - **화면 구성**
@@ -27,4 +32,3 @@
 
 - 테이블 뷰에 뿌려지는 userdefault의 값이 중복되서 나오는 문제..  좀만 더 보면 해결 될듯...
 
-- [Code](https://github.com/joohopark/jhbob/tree/master/Project/smallProject)

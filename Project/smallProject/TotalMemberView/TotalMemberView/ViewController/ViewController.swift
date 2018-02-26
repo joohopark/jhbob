@@ -49,6 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                          queue: nil) { (noti) in
                             if let usrList = userDefault.array(forKey: "UserList") as? [[String: String]]{
                                 for usr in usrList{
+                                    self.userNameList = []
                                     if !self.userNameList.contains(usr["Name"]!){
                                         self.userNameList.append(usr["Name"]!)
                                     }

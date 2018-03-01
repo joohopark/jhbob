@@ -21,7 +21,8 @@
 > Step0~, 에서 만들어본 자그마한 예제 코드들..
 
 - [FrameBase, UserDefault를 이용한 BlackJack miniGame](https://github.com/joohopark/jhbob/blob/master/Project/smallProject/BlackJack.md)
-- [NotifiocationCenter, Autolayout(Using StroyBoard)를 이용한 Signing Up, DetailMemberView 페이지](https://github.com/joohopark/jhbob/blob/master/Project/smallProject/NotificaionCenter_Autolayout.md) 
+- [NotifiocationCenter, Autolayout(Using StroyBoard)를 이용한 Signing Up, DetailMemberView](https://github.com/joohopark/jhbob/blob/master/Project/smallProject/NotificaionCenter_Autolayout.md) 
+- [bundle(load plist),data modelling,customcell,Autolayout(Using StroyBoard)를 이용한 tableView]()
  
 ## Step 0.
 

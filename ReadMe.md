@@ -52,6 +52,12 @@
 - [AutoLayoout](https://github.com/joohopark/jhbob/blob/master/Study/step2/About_AutoLayout.md)
 - [NotificationCenter](https://github.com/joohopark/jhbob/blob/master/Study/step2/Notification.md)
 
+## Step 3.
+
+>- Singleton Pattern, error exception... 주로 DataModelling에 관련된것들을 정리
+
+- [Singleton, DataModel??](https://github.com/joohopark/jhbob/blob/master/Study/step3/Singleton_datamodel,.md)
+- [enumulation, Error, bundle, FileLoad](https://github.com/joohopark/jhbob/blob/master/Study/step3/Enumulation_error_bundle.md)
 
 
 ## extension

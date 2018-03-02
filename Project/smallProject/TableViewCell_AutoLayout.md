@@ -8,7 +8,7 @@
 
 ## 18.03.01
 
-- [Code 보기]()
+- [Code 보기](https://github.com/joohopark/jhbob/tree/master/Project/smallProject/ChatUIPractice)
 
 ---
 
@@ -16,7 +16,7 @@
 
 |사용자View|사용자 Detail View| Setting View |
 |:--------|:--------:|--------:|
-| ![screen](UserView_bundle.jpg) | ![screen](UserDetailView.jpg) | ![screen](UserSettingView.jpg) |
+| ![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/UserView_bundle.jpg) | ![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/UserDetailView.jpg) | ![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/UserSettingView.jpg) |
 
 ## 요구사항
 
@@ -28,21 +28,21 @@
 
 - MainData
 
-![screen](MainDataModel.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/MainDataModel.jpg)
 
 - SettingData
 
-![screen](SettingDataModel.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/SettingDataModel.jpg)
 
 ## Data -> TableView Cell
 
 - MainData
 
-![screen](MainDataFlow.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/MainDataFlow.jpg)
 
 - SettingData
 
-![screen](SettingDataFlow.jpg)
+![screen](https://github.com/joohopark/jhbob/blob/master/Study/image/SettingDataFlow.jpg)
 
 
 

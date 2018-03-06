@@ -60,6 +60,7 @@
 - [Singleton, DataModel??](https://github.com/joohopark/jhbob/blob/master/Study/step3/Singleton_datamodel,.md)
 - [enumulation, Error, bundle, FileLoad](https://github.com/joohopark/jhbob/blob/master/Study/step3/Enumulation_error_bundle.md)
 - [ARC, 코드의 확장, generic](https://github.com/joohopark/jhbob/blob/master/Study/step3/ARC.md)
+- [UITabBarController, UICollectionView, UIGestureRecognizer, pickerView](https://github.com/joohopark/jhbob/blob/master/Study/step3/UITabbarController.md)
 
 
 ## extension

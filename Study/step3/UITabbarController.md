@@ -18,7 +18,7 @@
 
 ### Tabbar의 구조
 
-![screen](TabbarStruct.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/TabbarStruct.jpg)
 
 - Viewcontroller의 배열, 하나의 Tap이 동일한 중요도를 가진 ViewController들의 모임.
 - 1 ViewController 는 1 Tabbar Item을 갖는다.
@@ -102,7 +102,7 @@
 
 ## 구성도
 
-![screen](AboutCollectionView.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/AboutCollectionView.jpg)
 
 - DataSource를 통해 Cell의 갯수들을 결정, Layout Attribute를 통해 CollectionViewLayout을 결정해서 CollectionView를 구성한다.
 	- 커스텀 하게 구성하고자 한다. 
@@ -111,7 +111,7 @@
 
 ## Flow Layout
 
-![screen](FlowLayOut.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/FlowLayOut.jpg)
 
 - Flow Layout(UICollectionViewDelegateFlowLayout)
 	- Section이 나눠지고 Header, Footer(Supplementary view)를 통해 구분하고, Cell이 그안에 된다. 
@@ -149,7 +149,7 @@ section: Int) -> UIEdgeInsets
 
 - collection View의 Cell은 기본형이 없기 떄문에 무조건 customCell을 만들어 넣어야 한다.
 
-![screen](Exam_CellSpacing.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/Exam_CellSpacing.jpg)
 
 - 최소의 cell spacing은 Cell과 View.width간의 상관관계에서 남는 여백이 최소 이정도는 되야 된다~ 라는 의미이지 무조건적인 수치는 아님..
 
@@ -202,7 +202,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
 ## Layout of Section 
 
-![screen](SectionLayout.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/SectionLayout.jpg)
 
 - 헤더
 - 푸터
@@ -229,7 +229,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
 ## UIGestureRecognizer 종류
 
-![screen](gesture.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/gesture.jpg)
 
 - object Library
 	- tap : touch
@@ -259,7 +259,7 @@ self.view.addGestureRecognizer(tapGesture)// gesture add
 
 - gesture add
 
-![screen](gestureUsingStroy.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/gestureUsingStroy.jpg)
 
 
 ## PickerView
@@ -279,7 +279,7 @@ self.view.addGestureRecognizer(tapGesture)// gesture add
 
 ## PickerView Exam
 
-![screen](pickerExam.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/pickerExam.jpg)
 
 
 ```swift

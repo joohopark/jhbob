@@ -2,7 +2,7 @@
 
 ## A Sucessful Git Branch Model
 
-![screen](successfulGitModel.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/successfulGitModel.jpg)
 
 - Vincent Driessen's branching model...
 
@@ -74,7 +74,7 @@
 
 ### 내피셜
 
-![screen](gitFlow.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/gitFlow.jpg)
 
 ### Mac에서 GitFlow Install
 

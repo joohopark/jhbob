@@ -93,7 +93,7 @@
 - [시간복잡도](https://github.com/joohopark/jhbob/blob/master/Study/TimeComplexity.md)
 
 - Git 관리 전략
-	- [GitFlow]()
+	- [GitFlow](https://github.com/joohopark/jhbob/blob/master/Study/git_flow.md/git_flow.md)
 
 
 ### **:Email:**  : <bobplesae88@gmail.com>

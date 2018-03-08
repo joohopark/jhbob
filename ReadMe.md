@@ -11,7 +11,7 @@
 >
 >  mail로 noti주시면 감사하겠습니다 (꾸벅)
 
-## [IOS 참고하면 좋은 Reference](IOS_Ref.md)
+## [IOS 참고하면 좋은 Reference](https://github.com/joohopark/jhbob/blob/master/Study/IOS_Ref.md)
 
 ## TDD, (Test Driven Development)
 >- Without QA! 이 테스트는 내가 집도하도록 하지..

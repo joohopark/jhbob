@@ -100,6 +100,9 @@
 - UX/UI를 고민한다면 ...
 	- [UX_UI](https://github.com/joohopark/jhbob/blob/master/Study/UI_UX.md)
 
+- shortCuts
+	- [shortCuts](https://github.com/joohopark/jhbob/blob/master/Study/Shortcuts.md)
+
 ### **:Email:**  : <bobplesae88@gmail.com>
 > - 조언 및 오역, 잘못된 해석등에 대해서 feedBack을 **구걸!!** 합니다.
 

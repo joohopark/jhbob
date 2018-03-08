@@ -2,33 +2,32 @@
 
 ## Symbols
 
-![screen](symbols_shortcuts.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/symbols_shortcuts.jpg)
 
 - Symbols Notation
 
-
 ## Basic
-![screen](basic_shortcuts.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/basic_shortcuts.jpg)
 ## Assistance
-![screen](assistance_shortcuts.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/assistance_shortcuts.jpg)
 ## Tap_Widow
-![screen](tap_Window_shortcuts.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/tap_Window_shortcuts.jpg)
 ## Delete
-![screen](delete_shortcuts.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/delete_shortcuts.jpg)
 ## Apperance
-![screen](apperance_shortcuts.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/apperance_shortcuts.jpg)
 ## Text
-![screen](Text_Shortcuts.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/Text_Shortcuts.jpg)
 ## Build
-![screen](build_shortcuts.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/build_shortcuts.jpg)
 ## debugging
-![screen](debugging_shortcuts.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/debugging_shortcuts.jpg)
 ## Etc
-![screen](etc_shortcuts.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/etc_shortcuts.jpg)
 ## storyBoard
-![screen](storyboard_shortcuts.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/storyboard_shortcuts.jpg)
 ## Simulator
-![screen](simul_shortcuts.jpg)
+![screen](https://github.com/joohopark/jhbob/tree/master/Study/image/simul_shortcuts.jpg)
 
 ### - tip
 <pre>

@@ -97,6 +97,8 @@
 - Git 관리 전략
 	- [GitFlow](https://github.com/joohopark/jhbob/blob/master/Study/git_flow.md)
 
+- UX/UI를 고민한다면 ...
+	- [UX_UI](https://github.com/joohopark/jhbob/blob/master/Study/UI_UX.md)
 
 ### **:Email:**  : <bobplesae88@gmail.com>
 > - 조언 및 오역, 잘못된 해석등에 대해서 feedBack을 **구걸!!** 합니다.

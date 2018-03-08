@@ -21,8 +21,6 @@ class MemberCell: UITableViewCell {
         }
     }
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -35,3 +33,7 @@ class MemberCell: UITableViewCell {
     }
 
 }
+
+
+
+

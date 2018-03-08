@@ -90,6 +90,8 @@
 - [맥부기](http://cafe.naver.com/mcbugi)
 - [맥 쓰는 사람들](http://cafe.naver.com/inmacbook/)
 
+--
+
 ### Blogs
 
 - [Ray Wenderich](https://www.raywenderlich.com)
@@ -101,6 +103,8 @@
 - [Envato Tuts+](https://code.tutsplus.com/categories/ios-sdk)
 - [Big Nerd Ranch](https://www.bignerdranch.com/blog/categories/ios/)
 
+--
+
 ### Mailing List
 
 - [Swift Public Mailing List](https://lists.swift.org/mailman/listinfo)
@@ -109,6 +113,8 @@
 - [This week in Swift](https://swiftnews.curated.co)
 - [Swiftweekly](http://swiftweekly.com)
 
+--
+
 ### Device Specifications
 
 - [Support Matrix](http://iossupportmatrix.com)
@@ -116,6 +122,8 @@
 - [iOS Device Types](https://goo.gl/YOjtpv)
 - [List of iOS Devices](https://en.wikipedia.org/wiki/List_of_iOS_devices)
 - [iOS Device Specs Grid](http://blakespot.com/ios_device_specifications_grid.html)
+
+--
 
 ### Design
 
@@ -138,6 +146,8 @@
 	- [pinterest](https://www.pinterest.co.kr/search/pins/?q=ios)
 	- [dribble](https://dribbble.com/search?q=ios)
 
+--
+
 ### Resources
 
 - Icons
@@ -158,6 +168,8 @@
 	- [foodiesfeed](https://www.foodiesfeed.com)
 	- [negativespace](https://negativespace.co/)
 
+--
+
 ### OpenSources
 
 - Dependency Manager
@@ -175,6 +187,8 @@
 	- [Open Source iOS Apps](https://github.com/dkhamsing/open-source-ios-apps)
 	- [Swift UI Libraries](https://goo.gl/WdvyLk)
 	- [Cocoa Controls](https://www.cocoacontrols.com)
+
+--
 
 ### Learning
 
@@ -199,6 +213,8 @@
 	- [SlideShare](https://www.slideshare.net)
 	- [Speaker Deck](https://speakerdeck.com)
 
+--
+
 ### Algorithm
 
 - Domestic
@@ -217,6 +233,8 @@
 	- [Timus Online Judge](http://acm.timus.ru)
 	- [Codeforces](http://codeforces.com)
 
+--
+
 ### Tools
 
 - Automation
@@ -231,6 +249,8 @@
 - Ads
 	- [Google Admob](https://developers.google.com/admob/ios/quick-start)
 	- [Facebook Audience-Network](https://developers.facebook.com/docs/audience-network/ios)
+
+--
 
 ### Platforms / Open API
 
@@ -247,6 +267,8 @@
 - [SKT](https://developers.sktelecom.com)
 - [공공 데이터 포털](https://www.data.go.kr)
 - [관광공사](http://api.visitkorea.or.kr)
+
+--
 
 ### ReactiveX / RxSwift
 

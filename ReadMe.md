@@ -9,7 +9,7 @@
 >
 >보시다가 오역, 잘못된 해석, 정리에 대해 도움을 주신다면 가장 하단의 feedBack
 >
->  mail로 noti주시면 감사하겠습니다 (꾸벅)
+>  mail로 noti주시거나 PR 주시면 감사하겠습니다.., (꾸벅)
 
 ## [IOS 참고하면 좋은 Reference](https://github.com/joohopark/jhbob/blob/master/Study/IOS_Ref.md)
 

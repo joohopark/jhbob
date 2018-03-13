@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       print(Bundle.main.bundlePath)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("2번째")

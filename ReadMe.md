@@ -65,6 +65,12 @@
 - [UITabBarController, UICollectionView, UIGestureRecognizer, pickerView](https://github.com/joohopark/jhbob/blob/master/Study/step3/UITabbarController.md)
 - [FRPP?, Closure, High-Order Function, map, Filter, Reduce](https://github.com/joohopark/jhbob/blob/master/Study/step3/highOrderFunction.md)
 
+## Step 4.
+
+>- Error Handling, URL Scheme, Dependency Manager등.. 개발에 도움이 될만한 이론 & 툴 설치 방법등을 정리
+
+- [URL Scheme, Dependency Manager, Meta-Type](https://github.com/joohopark/jhbob/blob/master/Study/step4/URLScheme.md)
+
 ## extension
 >- Swift4가 아니더라도 할수 있지만, 쓸모있는 IOS Developer가 되기위해..!
 

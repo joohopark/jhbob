@@ -1,3 +1,4 @@
+# foreach
 # for in, 
 # while,
 # 반복문,
@@ -18,6 +19,28 @@
  
  -> 처음, 끝 지정 숫자에 변수를 넣어도 가능
 ```
+
+## Swift foreach Statement
+
+- Calls the given closure on each element in the sequence in the same order as a for-in loop.
+	- 주어진 시퀀스 안의 각각의 Element를 for-in 반복과 같이 진행하며, 클로져로 하나씩 떤져줌.
+
+
+```swift
+let numberWords = ["one", "two", "three"]
+for word in numberWords {
+    print(word)
+}
+// Prints "one"
+// Prints "two"
+// Prints "three"
+
+numberWords.forEach { word in
+    print(word)
+}
+// Same as above
+```
+
 
 
 ## Swift for in Statement

@@ -10,6 +10,10 @@
 >보시다가 오역, 잘못된 해석, 정리에 대해 도움을 주신다면 가장 하단의 feedBack
 >
 >  mail로 noti주시거나 PR 주시면 감사하겠습니다.., (꾸벅)
+> 
+> 제가 공부하기위해서 (사실상 기억력 부재로.. 잊어버렸을때 키워드만 보고 기억력을 되살리기 위한 방안으로 Paper 정리 ..)
+> 
+> 작성된 글들입니다.. 하지만 궁금하신 부분이 있으시다면 언제나~!
 
 ## [IOS 참고하면 좋은 Reference](https://github.com/joohopark/jhbob/blob/master/Study/IOS_Ref.md)
 
@@ -21,9 +25,9 @@
 >
 >정말 맵네요... 
 
-- [preView.. 얼마나 맵길래?!](Rx01.md)
-- [Observable?](Observable.md)
-- [Subject...T-T..](Subject.md)
+- [preView.. 얼마나 맵길래?!](https://github.com/joohopark/jhbob/blob/master/Study/RxSwift/Rx01.md)
+- [Observable?](https://github.com/joohopark/jhbob/blob/master/Study/RxSwift/Observable.md)
+- [Subject...T-T..](https://github.com/joohopark/jhbob/blob/master/Study/RxSwift/Subject.md)
 
 
 ## TDD, (Test Driven Development)

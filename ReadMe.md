@@ -13,6 +13,19 @@
 
 ## [IOS 참고하면 좋은 Reference](https://github.com/joohopark/jhbob/blob/master/Study/IOS_Ref.md)
 
+## Rx, Reactive Extension ...
+
+>- 정말 어렵습니다. 3월 현재 딜리게이트 대신 쓰면 좋겠다~ 정도입니다. 
+>
+>하지만 Side Effect를 줄여준다는 부분은 확실히 공감하는 패러다임이기때문에 맛을 보고잇습니다.
+>
+>정말 맵네요... 
+
+- [preView.. 얼마나 맵길래?!](Rx01.md)
+- [Observable?](Observable.md)
+- [Subject...T-T..](Subject.md)
+
+
 ## TDD, (Test Driven Development)
 >- Without QA! 이 테스트는 내가 집도하도록 하지..
 

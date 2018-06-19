@@ -71,7 +71,7 @@ someinstance.someFuncsion()
 
 SomeClass.someFunction(someinstance)() // 결과로 someFunctions이 콜됨.
 ```
-13: 40 초
+
 
 
 

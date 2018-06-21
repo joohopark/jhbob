@@ -93,6 +93,8 @@
 
 - Sketch
 
+- DataStructure
+
 - Algorithm
 	- [Recursive, 재귀가 뭐임?](https://github.com/joohopark/jhbob/blob/master/Study/Recursive/Recursive01.md)
 	- [Recursive Think!](https://github.com/joohopark/jhbob/blob/master/Study/Recursive/Recursive02.md)
